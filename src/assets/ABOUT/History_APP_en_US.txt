@@ -1,0 +1,22 @@
+====================================================================================
+HISTORY AND ARCHITECTURE OF GEOESTABIL
+Version: 2026.11.11.0 — Slope Stability & Retaining Walls (Rust + egui)
+====================================================================================
+
+1. ENGINEERING VISION AND AUXILIARY STUDY NATURE
+------------------------------------------------------------------------------------
+GeoEstabil was conceived as a personal, educational, and computational research project in geotechnical and structural engineering written in Rust, designed to didactically illustrate classical limit equilibrium models (ABNT NBR 11682:2009), lateral earth pressures, and preliminary retaining-wall sizing (ABNT NBR 6122:2022 and NBR 6118:2023). Because it is intended exclusively for academic study and experimentation, its outputs may contain numerical bugs, algorithmic limitations, or conceptual simplifications and do not replace consolidated commercial software or manual verification.
+
+By pairing systems-grade Rust performance with a GPU-accelerated native graphical interface (egui 0.37 / wgpu), GeoEstabil allows academic investigation of multi-threaded grid sweeps and step-by-step didactic inspection in the Calculation Memorial.
+
+2. TIMELINE AND TECHNICAL EVOLUTION
+------------------------------------------------------------------------------------
+• Phase 1 — Geotechnical & Structural Mathematical Core: Implementation of 2D stratified geometry (polylines and vertical slice intersection), Limit Equilibrium Methods (Fellenius, Simplified Bishop with m_alpha iteration and numerical instability guards, and Simplified Janbu with correction factor f0), plus Rankine and Coulomb earth pressure theories and shallow footing bearing capacity.
+• Phase 2 — Parallel Rayon Engine & Reinforced Concrete Walls (NBR 6118): Adoption of Rayon for real multi-core CPU sweeps across (center_x x center_y x radius) meshes, structural wall design module covering gravity and cantilever types with ELS-W crack-width checking, minimum and maximum rebar ratios, shear capacity V_Rd1 >= V_d, and assisted preliminary sizing.
+• Phase 3 — Interactive 2D Editor, SQLite Persistence & Headless CLI: Development of the responsive 2D Canvas featuring Zoom and Pan, FS Heatmap rendering, earth-pressure and bearing-stress diagrams, local SQLite SPT soil catalog (`geoestabil.db`), and standalone `geoestabil-cli` utility for automation and computational study workflows.
+• Phase 4 — Legal Alignment, Dual Licensing & ABNT References: Consolidation of the Dual-Licensing model (GNU AGPLv3 for public source code and Commercial EULA/CLC for official Microsoft Store binaries), email-only support at `linceu_lighthouse@outlook.com` according to availability with no obligation of urgency, and Modeless Z-Order windows for the User Manual and About dialog with formal ABNT bibliographic references under Third-Party Notices.
+
+3. LIMITATION ON PRODUCTION USE & LEGAL DISCLAIMER OF AUTHOR LIABILITY
+------------------------------------------------------------------------------------
+The software MUST NOT be relied upon as a definitive tool for engineering decisions, construction designs, forensic opinions, or real production and workplace environments. Provided "as is", all results must be checked manually and verified against more established market software tools pursuant to the Brazilian Civil Code and GNU AGPLv3 Sections 15–16, wholly exempting the author from legal liability for any misuse or production use without licensed engineering oversight (ART/RRT).
+====================================================================================

@@ -1,0 +1,22 @@
+Project: GEOESTABIL
+Version: 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
+Author & Copyright Holder: Fernando Nillsson Cidade
+
+Description: Local Desktop Platform for Slope Stability and Retaining Wall Study
+"Explore classical geotechnical and structural models — locally, visually, and deterministically."
+
+GeoEstabil is a native desktop application engineered in Rust (Edition 2021) with an immediate-mode GUI powered by egui/eframe (GPU-accelerated rendering) and multi-core CPU parallelism via Rayon. Designed as an auxiliary tool for academic study, teaching, and computational experimentation, it integrates two main modules in a 100% local and offline experience:
+
+1. Slope Stability (conceptual references ABNT NBR 11682:2009): Interactive 2D graphic editor for stratified profiles, phreatic water table, and surface surcharges, featuring vertical-slice equilibrium solvers (Fellenius, Simplified Bishop, and Simplified Janbu), parallel Rayon grid sweeps, FS Heatmaps, and critical circular surface highlighting.
+2. Retaining Walls & Foundations (conceptual references ABNT NBR 6122:2022 and NBR 6118:2023): Preliminary simulation of gravity walls (cyclopean concrete and gabion) and reinforced concrete cantilever walls (stem, toe, and heel), covering Rankine and Coulomb earth pressures, external checks, and didactic rebar sizing, plus a local SQLite SPT soil catalog (NBR 6484 in `geoestabil.db`), headless CLI (`geoestabil-cli.exe`), and study report export (HTML5/PDF, Markdown, and SVG).
+
+Commitment to Local Privacy (100% Local-First):
+Your data never leaves your computer. GeoEstabil operates 100% offline, without cloud dependency, without telemetry collection, without user accounts, and without external AI or large language models (LLM/RAG).
+
+Licensing, Copyright & Support:
+- Public source code on GitHub (https://github.com/fernandoncidade) licensed under GNU Affero General Public License v3 (GNU AGPLv3): free to study, copy, modify, compile, and distribute provided original credits are retained and modified source code is shared under the same GNU AGPLv3 license, reserving the "GeoEstabil" mark under Section 7(e).
+- Official Microsoft Store binaries distributed under Dual Licensing (Commercial EULA and CLC), exempting commercial purchasers from GNU AGPLv3 source-disclosure obligations for internal use.
+- Technical support provided exclusively via email at `linceu_lighthouse@outlook.com`, on a reasonable best-effort basis according to the author's availability, without obligation of urgency or fixed SLA.
+
+Academic Study Notice & Legal Disclaimer:
+Owing to its educational and experimental nature, GeoEstabil may contain software bugs, simplifications, or numerical inaccuracies, and is provided "as is". It MUST NOT be used as definitive software for decisions in production, civil works, or real workplace environments. Users must manually check every result and verify outputs using more established market tools, field testing, and a legally licensed engineer (ART/RRT). Any definitive reliance without independent validation constitutes improper use at the user's sole risk, wholly exempting the author from liability. Cited ABNT standards belong exclusively to ABNT, with no institutional affiliation or endorsement.

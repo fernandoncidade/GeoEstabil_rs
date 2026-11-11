@@ -1,0 +1,51 @@
+[package]
+name = "geoestabil_rs"
+version = "2026.11.11"
+edition = "2021"
+description = "GeoEstabil — Ferramenta auxiliar para estudo de estabilidade de taludes e dimensionamento de muros de arrimo (referências ABNT NBR 11682, NBR 6122, NBR 6118)"
+authors = ["Fernando Nillsson Cidade <linceu_lighthouse@outlook.com>"]
+# Dual-Licensed Project (see docs/licensing.md):
+# - Public GitHub source code: GNU AGPLv3 (SPDX: AGPL-3.0-only, with Section 7(e) brand & trademark notice)
+# - Official Microsoft Store MSIX binaries: Commercial EULA (src/assets/EULA/) + CLC (src/assets/CLC/)
+license = "AGPL-3.0-only"
+repository = "https://github.com/fernandoncidade"
+build = "src/build.rs"
+
+[lib]
+name = "geoestabil_rs"
+path = "src/lib.rs"
+
+[[bin]]
+name = "geoestabil"
+path = "src/main.rs"
+
+[[bin]]
+name = "geoestabil-cli"
+path = "src/bin/main_cli.rs"
+
+[dependencies]
+eframe = "0.37.0"
+egui = "0.37.0"
+rayon = "1.10.0"
+image = { version = "0.25.10", default-features = false, features = ["ico", "png"] }
+rusqlite = { version = "0.41.0", features = ["bundled"] }
+serde = { version = "1.0.229", features = ["derive"] }
+serde_json = "1.0.154"
+chrono = { version = "0.4.45", features = ["serde"] }
+rfd = "0.17.2"
+windows-sys = { version = "0.61.2", features = [
+    "Win32_Foundation",
+    "Win32_Graphics_Gdi",
+    "Win32_UI_WindowsAndMessaging",
+    "Win32_UI_Shell",
+    "Win32_System_Console"
+] }
+
+[build-dependencies]
+winres = "0.1"
+
+[profile.release]
+opt-level = 3
+lto = true
+codegen-units = 1
+strip = true

@@ -1,0 +1,65 @@
+GeoEstabil Privacy Policy
+Last updated: November 11, 2026
+Version: 2026.11.11.0 (Cargo: 2026.11.11)
+
+Your privacy is fundamental to us. This Privacy Policy explains what information GeoEstabil ("Software", comprising geoestabil.exe and geoestabil-cli.exe) uses and, more importantly, how it remains entirely under your control.
+
+By using GeoEstabil, you agree to the practices described herein.
+
+1. Core Principle: Local Privacy (100% Local-First)
+
+GeoEstabil was designed with local privacy as a central pillar. All information, geotechnical parameters, project inputs, soil catalogs, and generated reports are processed and stored exclusively on your local computer. No information is transmitted to the author's servers or to third parties.
+
+2. Information Processed Locally by the Software
+
+To run didactic calculations and generate auxiliary study summaries, the Software accesses and processes in local memory (RAM) and local storage only the data actively entered by you:
+
+ - Technical & Project Data: Project title, site location, client name, engineer name, or professional identifiers (CREA/ART) optionally entered into editable fields.
+ - Geotechnical & Structural Parameters: Slope stratigraphy, cohesion, friction angle, unit weights, water table, retaining wall dimensions, and calculation settings.
+ - System & Local Preference Data: Language preference, visual theme (Light/Dark), and basic interface settings.
+
+Although you may enter names or personal identifiers into project report fields, the Software never collects or transmits such information outside of your device.
+
+3. Use of Information
+
+Information processed by GeoEstabil is used exclusively to:
+
+ - Perform local numerical calculations for slope stability and retaining walls;
+ - Render interactive 2D graphics, heatmaps, and diagrams on your screen;
+ - Maintain the local soil catalog and project history in `%APPDATA%\GeoEstabil\geoestabil.db`;
+ - Export project files (`.geoestabil`), HTML/PDF reports, Markdown, or SVG outputs into folders chosen by you.
+
+4. Data Storage, Security, and Microsoft Store
+
+ - Storage: Local data resides in `%APPDATA%\GeoEstabil\geoestabil.db` and in files exported by you. You retain complete control over them.
+ - Security: The security of your files depends on the security of your own computer. Because the Software is 100% offline and opens no network connections, there is zero remote transmission risk from the application.
+ - Sharing: GeoEstabil does not collect, transmit, or share data with the developer or third parties. When acquired commercially through the Microsoft Store, billing, Microsoft Account operations, and any Windows diagnostics are processed independently by Microsoft Corporation under the Microsoft Privacy Statement (https://www.microsoft.com/pt-br/privacy/privacystatement).
+
+5. Your Rights and Full Control
+
+You have absolute control over your local data. At any time, you can:
+
+ - Edit, clear, or delete project files (`.geoestabil`) and exported reports;
+ - Delete or reset the local database `%APPDATA%\GeoEstabil\geoestabil.db`;
+ - Uninstall the Software using standard Windows controls.
+
+6. Zero Telemetry and Deterministic Logic (No AI)
+
+GeoEstabil operates on the premise of Sovereign Privacy and Zero Telemetry. The Software implements no remote analytics, usage tracking, advertising, automated crash reporting, or cloud AI/LLM services.
+
+7. Children's Privacy
+
+GeoEstabil is an auxiliary tool for academic study and computational exploration, is not intended for children under the age of 13, and does not knowingly collect any personal information from minors.
+
+8. Changes to this Policy
+
+This Privacy Policy may be updated occasionally by updating the date and version at the top of this document.
+
+9. Contact, Support & Legal Disclaimer
+
+Any inquiries regarding this Privacy Policy or the Software must be sent exclusively by email, handled on a reasonable best-effort basis according to the author's availability and without obligation of urgency:
+
+Fernando Nillsson Cidade
+Official Email: linceu_lighthouse@outlook.com
+
+Usage Notice: GeoEstabil is an auxiliary academic study tool provided "as is" and may contain errors. It must not be used as definitive software in production, requiring manual checking and validation in established market tools, and the author is exempt from liability for any misuse.

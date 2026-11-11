@@ -1,0 +1,22 @@
+Projeto: GEOESTABIL
+Versão: 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
+Autor e Titular: Fernando Nillsson Cidade
+
+Descrição: Plataforma Desktop Local para Estudo de Estabilidade de Taludes e Muros de Arrimo
+"Explore modelos geotécnicos e estruturais clássicos — localmente, visualmente e de forma determinística."
+
+O GeoEstabil é uma aplicação desktop nativa desenvolvida em Rust (Edição 2021) com interface imediata via egui/eframe (renderização acelerada por GPU) e paralelismo em CPU via Rayon. Concebido como ferramenta auxiliar de estudo acadêmico, ensino e experimentação computacional, integra dois módulos principais em uma experiência 100% local e offline:
+
+1. Estabilidade de Taludes (referências conceituais ABNT NBR 11682:2009): Editor gráfico 2D para perfis estratigráficos, nível freático e sobrecargas, com cálculo pelo método das fatias (Fellenius, Bishop Simplificado e Janbu Simplificado), varredura paralela em grade via Rayon, mapa de calor (Heatmap) e destaque de superfície circular crítica.
+2. Muros de Arrimo e Fundações (referências conceituais ABNT NBR 6122:2022 e NBR 6118:2023): Simulação preliminar de muros de gravidade (concreto ciclópico e gabião) e flexão em concreto armado (fuste, ponta e calcanhar), contemplando empuxos por Rankine e Coulomb, verificações externas e dimensionamento didático de armaduras, além de catálogo local SPT (NBR 6484) em SQLite (`geoestabil.db`), utilitário CLI (`geoestabil-cli.exe`) e exportação de memoriais de estudo (HTML5/PDF, Markdown e SVG).
+
+Compromisso com a Privacidade Local (100% Local-First):
+Seus dados nunca saem do seu computador. O GeoEstabil opera 100% offline, sem dependência de nuvem, sem coleta de telemetria, sem contas de usuário e sem modelos externos de inteligência artificial (LLM/RAG).
+
+Licenciamento, Direitos Autorais e Suporte:
+- Código-fonte público no GitHub (https://github.com/fernandoncidade) licenciado sob a GNU Affero General Public License v3 (GNU AGPLv3): livre para estudo, cópia, modificação, compilação e distribuição, mantendo os créditos originais e o compartilhamento sob a mesma licença GNU AGPLv3, preservando a marca "GeoEstabil" (Seção 7(e)).
+- Binários oficiais da Microsoft Store distribuídos sob Duplo Licenciamento (EULA Comercial e CLC), isentando o adquirente comercial das obrigações de abertura de código da GNU AGPLv3 para uso interno.
+- Suporte técnico prestado exclusivamente pelo e-mail `linceu_lighthouse@outlook.com`, em regime de melhor esforço conforme a disponibilidade do autor, sem obrigação de urgência ou SLA.
+
+Aviso de Uso Exclusivo para Estudo e Isenção Legal:
+Por sua natureza educacional e experimental, o GeoEstabil pode conter falhas de programação, simplificações ou imprecisões numéricas, sendo fornecido "no estado em que se encontra" (as-is). NÃO serve como software definitivo para decisões em produção, obras civis ou ambientes reais de trabalho. É obrigatório conferir manualmente todos os resultados e validá-los por outras ferramentas consolidadas no mercado, ensaios de campo e profissional legalmente habilitado (ART/RRT). Qualquer utilização definitiva sem validação independente configura uso indevido por conta e risco exclusivos do usuário, isentando integralmente o autor de responsabilidade. As normas técnicas citadas pertencem exclusivamente à ABNT, sem vínculo ou endosso institucional.

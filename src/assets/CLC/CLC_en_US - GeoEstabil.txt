@@ -1,0 +1,64 @@
+COMMERCIAL LICENSING AND MICROSOFT STORE DISTRIBUTION TERMS — GEOESTABIL
+Version 2026.11.11.0, November 11, 2026
+Author and Copyright Holder: Fernando Nillsson Cidade (Independent Developer, Natural Person)
+Official Support Channel: linceu_lighthouse@outlook.com
+Official Commercial Distribution Channel: Microsoft Store
+
+================================================================================
+1. OWNERSHIP AND NATURE OF DEVELOPMENT
+================================================================================
+
+1.1. The GeoEstabil software (executables geoestabil.exe and geoestabil-cli.exe, plus its original documentation) is an intellectual work exclusively owned by Fernando Nillsson Cidade, an individual and independent developer, protected by Brazilian Software Law (Federal Law No. 9,609/1998) and Copyright Law (Law No. 9,610/1998).
+
+1.2. The developer acts solely as an individual, not constituting a financial institution or commercial corporate entity. There is no direct billing of late interest, penalties, or direct invoicing through parallel banking instruments (such as PIX or payment slips issued by the author).
+
+================================================================================
+2. COMMERCIAL DISTRIBUTION VIA MICROSOFT STORE
+================================================================================
+
+2.1. Official commercialization of the compiled version (executable binary) of GeoEstabil is carried out primarily through the Microsoft Store digital platform.
+
+2.2. Payment processing, billing, refunds, currency conversions, and management of installation rights across multiple Windows devices linked to the user's account are directly operated by Microsoft Corporation infrastructure under Microsoft Store terms and the Microsoft Privacy Statement (https://www.microsoft.com/pt-br/privacy/privacystatement).
+
+2.3. Commercial acquisition through the Microsoft Store grants the purchaser the right to use the application in compliance with the commercial EULA, including automatic store updates when published by the author and exemption from GNU AGPLv3 copyleft obligations for internal use.
+
+================================================================================
+3. COEXISTENCE WITH THE OPEN SOURCE EDITION (GNU AGPLv3)
+================================================================================
+
+3.1. Commercial distribution on the Microsoft Store coexists with public availability of the source code in the GitHub repository under the GNU Affero General Public License v3 (GNU AGPLv3).
+
+3.2. Users and developers who do not wish to purchase the commercial version on the Microsoft Store retain full legal rights to obtain the source code, audit it, compile their own versions, modify them, and use them free of charge, maintaining strict compliance with the sharing, attribution, and reciprocity clauses of GNU AGPLv3, as well as trademark reservation for "GeoEstabil" (Section 7(e)).
+
+================================================================================
+4. SCOPE AND LIMITATIONS OF TECHNICAL SUPPORT
+================================================================================
+
+4.1. Because this is a personal, independent project maintained individually by the developer, all customer care and technical support for Microsoft Store purchasers and community users is provided exclusively via official email: linceu_lighthouse@outlook.com.
+
+4.2. EXPRESS SERVICE LIMITATIONS:
+- NO telephone, live chat, or video support is provided;
+- NO remote access to user computers or servers is provided;
+- NO custom engineering consulting or project/ART review is provided;
+- NO commitment to any commercial SLA (Service Level Agreement), fixed response time, or obligation of urgent/immediate assistance applies;
+- Email support is provided strictly on a reasonable best-effort basis, solely according to the maintainer's availability.
+
+================================================================================
+5. PERSONAL DATA PROTECTION AND PRIVACY (LGPD - LAW NO. 13,709/2018)
+================================================================================
+
+5.1. GeoEstabil was designed under the Local-First privacy concept with 100% offline operation. The author does not collect, store on remote servers, or process personal, telemetric, or billing data; the local geoestabil.db database stays exclusively on the user's device.
+
+5.2. Registration and financial data collected during purchase on the Microsoft Store are the exclusive responsibility of Microsoft Corporation, subject to the Privacy Statement of that platform (https://www.microsoft.com/pt-br/privacy/privacystatement).
+
+================================================================================
+6. AUXILIARY STUDY PURPOSE, MISUSE EXEMPTION AND LIMITATION OF LIABILITY
+================================================================================
+
+6.1. GeoEstabil is an auxiliary computational tool intended exclusively for academic study, educational research, and preliminary simulation. By its nature, it may contain coding errors, algorithmic limitations, or simplifications, and MUST NOT be used as definitive or certified software for real-world decisions in production, civil works, forensic reports, or construction designs. All outputs require full manual checking and validation in established market software, alongside geotechnical tests and review by a legally licensed engineer (ART/RRT).
+
+6.2. ABNT technical standards cited strictly as methodological references belong solely to ABNT; this software has no affiliation with or endorsement from ABNT.
+
+6.3. Under the Brazilian Civil Code and Sections 15 and 16 of GNU AGPLv3, the software is provided "as is" and "with all faults". Any definitive reliance in production or without independent external verification constitutes improper out-of-scope use at the user's sole risk and fault, wholly exempting the developer from liability for direct, indirect, structural, or geotechnical damages, incompatibilities, hardware failures, loss of profits, loss of business, file corruption, or any other losses arising out of use beyond this academic study scope.
+
+6.4. The liability of the developer toward the commercial purchaser, in the event of any definitive judicial ruling not excluded by law, shall be strictly limited to the amount paid for the acquisition of the license on the Microsoft Store.

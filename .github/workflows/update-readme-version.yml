@@ -1,0 +1,214 @@
+name: Update Version in README
+
+on:
+  push:
+    branches:
+      - main
+
+permissions:
+  contents: write
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
+jobs:
+  update-version:
+    runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, '[skip ci]') && !contains(github.event.head_commit.message, '[ci skip]')"
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+          persist-credentials: true
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Extract version from push commits or Cargo.toml
+        id: extract_version
+        shell: bash
+        run: |
+          set -euo pipefail
+          EVENT="$GITHUB_EVENT_PATH"
+          REGEX='v?[0-9]{4}\.[0-9]+\.[0-9]+(\.[0-9]+)?'
+
+          echo "=== DEBUG: inspecting push payload ==="
+          jq -r '.head_commit.message // "NO_HEAD_COMMIT_MESSAGE"' "$EVENT" || true
+
+          VERSION=""
+
+          # 1) Tentativa no head_commit
+          HEAD_MSG=$(jq -r '.head_commit.message // ""' "$EVENT")
+          if echo "$HEAD_MSG" | grep -oE "$REGEX" >/dev/null; then
+            VERSION=$(echo "$HEAD_MSG" | grep -oE "$REGEX" | head -1)
+          fi
+
+          # 2) Se não achou no head, procurar no array de commits do push
+          if [ -z "$VERSION" ]; then
+            while IFS= read -r msg; do
+              if echo "$msg" | grep -oE "$REGEX" >/dev/null; then
+                VERSION=$(echo "$msg" | grep -oE "$REGEX" | head -1)
+                break
+              fi
+            done < <(jq -r '(.commits // []) | reverse | .[].message' "$EVENT")
+          fi
+
+          # 3) Fonte de verdade oficial da aplicação: ler do Cargo.toml
+          if [ -z "$VERSION" ] && [ -f "Cargo.toml" ]; then
+            CARGO_VER=$(grep -m 1 -E '^version\s*=' Cargo.toml | sed -E 's/version\s*=\s*"([^"]+)"/\1/' || true)
+            if [ -n "$CARGO_VER" ]; then
+              echo "Version extracted from Cargo.toml: $CARGO_VER"
+              VERSION="$CARGO_VER"
+            fi
+          fi
+
+          # 4) Normalizar versão: se vier com 3 dígitos (ex: 2026.11.6), completa com .0
+          if [ -n "$VERSION" ]; then
+            [[ "$VERSION" == v* ]] && VERSION="${VERSION#v}"
+            if [[ "$VERSION" =~ ^[0-9]{4}\.[0-9]+\.[0-9]+$ ]]; then
+              VERSION="${VERSION}.0"
+            fi
+            VERSION="v$VERSION"
+            echo "Version resolved and normalized: $VERSION"
+            echo "version=$VERSION" >> "$GITHUB_OUTPUT"
+            echo "has_version=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "No version pattern found"
+            echo "has_version=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Debug - Show current README versions
+        if: steps.extract_version.outputs.has_version == 'true'
+        run: |
+          echo "=== Current versions and dates in README.md ==="
+          grep -n -E 'Release-v?[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+' README.md || echo "No release badge found"
+          grep -n -E '\*\*(?:Observação|Note):?\*\*.*`[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+`' README.md || echo "No notes found"
+          grep -n -E '\*\*(?:Versão|Version):?\*\* `[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+`' README.md || echo "No technical specifications found"
+          echo "==============================================="
+
+      - name: Update README.md
+        if: steps.extract_version.outputs.has_version == 'true'
+        run: |
+          set -euo pipefail
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          echo "Updating README.md with version $VERSION"
+
+          cp README.md README.md.bak
+
+          VERSION="$VERSION" python3 <<'PY'
+          import os
+          import re
+          from datetime import date
+          from pathlib import Path
+
+          version_raw = os.environ["VERSION"]
+          match = re.fullmatch(r"v?(\d{4})\.(\d{1,2})\.(\d{1,2})\.(\d+)", version_raw)
+          if not match:
+              raise SystemExit(f"Invalid version format: {version_raw}")
+
+          year = int(match.group(1))
+          month = int(match.group(2))
+          day = int(match.group(3))
+          revision_date = date(year, month, day)
+
+          version_tag = f"v{year}.{month}.{day}.{match.group(4)}"
+          version_bare = f"{year}.{month}.{day}.{match.group(4)}"
+
+          pt_months = {
+              1: "janeiro", 2: "fevereiro", 3: "março", 4: "abril",
+              5: "maio", 6: "junho", 7: "julho", 8: "agosto",
+              9: "setembro", 10: "outubro", 11: "novembro", 12: "dezembro"
+          }
+          en_months = {
+              1: "January", 2: "February", 3: "March", 4: "April",
+              5: "May", 6: "June", 7: "July", 8: "August",
+              9: "September", 10: "October", 11: "November", 12: "December"
+          }
+
+          readme = Path("README.md")
+          text = readme.read_text(encoding="utf-8")
+
+          # 1) Atualiza badge de versão no topo
+          text, badge_count = re.subn(
+              r"(https://img\.shields\.io/badge/Release-)v?\d{4}\.\d{1,2}\.\d{1,2}\.\d+(-blue\.svg)",
+              rf"\g<1>{version_tag}\g<2>",
+              text,
+          )
+
+          # 2) Atualiza observação inicial nos dois idiomas suportados (pt-BR e en-US)
+          text, note_count = re.subn(
+              r"(> \*\*(?:Observação|Note)\s*:\*\*.*?\*\*`)\d{4}\.\d{1,2}\.\d{1,2}\.\d+(`\*\*)",
+              rf"\g<1>{version_bare}\g<2>",
+              text,
+          )
+
+          # 3) Atualiza Ficha Técnica com versão e data nos dois idiomas suportados
+          text, pt_count = re.subn(
+              r"- \*\*Versão:\*\* `\d{4}\.\d{1,2}\.\d{1,2}\.\d+` \(Data: [^)]+\)(\s*(?:<br>)?)$",
+              f"- **Versão:** `{version_bare}` (Data: {revision_date.day} de {pt_months[revision_date.month]} de {revision_date.year})\\1",
+              text,
+              flags=re.MULTILINE,
+          )
+          text, en_count = re.subn(
+              r"- \*\*Version:\*\* `\d{4}\.\d{1,2}\.\d{1,2}\.\d+` \(Date:\s*[^)]+\)(\s*(?:<br>)?)$",
+              f"- **Version:** `{version_bare}` (Date: {en_months[revision_date.month]} {revision_date.day}, {revision_date.year})\\1",
+              text,
+              flags=re.MULTILINE,
+          )
+
+          # 4) Preserva ou atualiza links de documentação de release caso existam
+          release_doc_exists = Path(f"docs/release-{version_tag}.md").exists()
+          if release_doc_exists:
+              text, _ = re.subn(
+                  r"docs/release-v\d{4}\.\d{1,2}\.\d{1,2}\.\d+\.md",
+                  f"docs/release-{version_tag}.md",
+                  text,
+              )
+
+          if badge_count == 0:
+              raise SystemExit("Badge release version was not matched/updated")
+          if note_count != 2:
+              raise SystemExit(f"Expected 2 language notes updated, found {note_count}")
+          if pt_count == 0:
+              raise SystemExit("Portuguese technical specification was not updated")
+          if en_count == 0:
+              raise SystemExit("English technical specification was not updated")
+
+          with readme.open("w", encoding="utf-8", newline="\n") as file:
+              file.write(text)
+
+          print(f"Updated badge version: {badge_count}")
+          print(f"Updated language notes: {note_count}")
+          print(f"Updated technical specifications across both supported languages (PT={pt_count}, EN={en_count})")
+          PY
+
+          echo "=== Changes made ==="
+          diff -u README.md.bak README.md || true
+          echo "===================="
+
+          rm README.md.bak
+          echo "README.md updated with version $VERSION"
+
+      - name: Check for changes
+        if: steps.extract_version.outputs.has_version == 'true'
+        id: check_changes
+        run: |
+          if git diff --quiet README.md; then
+            echo "No changes detected in README.md"
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "Changes detected in README.md:"
+            git diff README.md
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Commit and push changes
+        if: steps.extract_version.outputs.has_version == 'true' && steps.check_changes.outputs.has_changes == 'true'
+        run: |
+          VERSION="${{ steps.extract_version.outputs.version }}"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git config --local user.name "github-actions[bot]"
+          git add README.md
+          git commit -m "chore: update version to $VERSION in README.md [skip ci]"
+          git pull --rebase
+          git push

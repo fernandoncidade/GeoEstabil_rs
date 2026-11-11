@@ -1,0 +1,22 @@
+====================================================================================
+HISTÓRICO E ARQUITETURA DA PLATAFORMA GEOESTABIL
+Versão: 2026.11.11.0 — Estabilidade de Taludes & Muros de Arrimo (Rust + egui)
+====================================================================================
+
+1. VISÃO DE CONCEPÇÃO E NATUREZA AUXILIAR DE ESTUDO
+------------------------------------------------------------------------------------
+A concepção do GeoEstabil nasceu como um projeto pessoal, educacional e de pesquisa computacional voltado à engenharia geotécnica e estrutural em Rust, buscando ilustrar didaticamente modelos clássicos de equilíbrio limite (ABNT NBR 11682:2009), empuxos de terra e dimensionamento preliminar de arrimos (ABNT NBR 6122:2022 e NBR 6118:2023). Por tratar-se de aplicação concebida exclusivamente para estudo acadêmico e experimentação, seus resultados podem apresentar falhas numéricas, limitações algorítmicas ou simplificações conceituais e não substituem ferramentas comerciais consolidadas nem conferência manual.
+
+Ao unir desempenho computacional de sistemas em Rust à ergonomia imediata de uma interface gráfica nativa acelerada por GPU (egui 0.37 / wgpu), o GeoEstabil permite investigar academicamente varreduras multithread e conferência didática passo a passo no Memorial de Cálculo.
+
+2. LINHA DO TEMPO E EVOLUÇÃO TÉCNICA
+------------------------------------------------------------------------------------
+• Fase 1 — Núcleo Matemático Geotécnico & Estrutural: Implementação de geometria estratigráfica 2D (poligonais e interseção de fatias), algoritmos de equilíbrio limite (Fellenius, Bishop Simplificado com iteração de m_alpha e proteção numérica contra convergência instável, e Janbu Simplificado com fator corretivo f0), além das teorias de empuxo de Rankine e Coulomb e capacidade de carga de sapatas.
+• Fase 2 — Engine Rayon Paralela & Muros em Concreto Armado (NBR 6118): Adoção do Rayon para varredura massiva de malhas (centro_x x centro_y x raio) em paralelo real na CPU, módulo estrutural de muros de gravidade e flexão com verificação de fissuração ELS-W, armadura mínima e máxima, esforço cortante V_Rd1 >= V_d e pré-dimensionamento assistido.
+• Fase 3 — Editor Gráfico 2D Interativo, Persistência SQLite e CLI: Desenvolvimento do Canvas 2D responsivo com Zoom e Pan, renderização de Heatmap do FS, plotagem dos diagramas de empuxo e tensões na base, catálogo de solos SPT em banco SQLite local (`geoestabil.db`) e binário headless `geoestabil-cli` para automação e estudos computacionais.
+• Fase 4 — Consolidação Legal, Duplo Licenciamento e Referências ABNT: Alinhamento do modelo de Duplo Licenciamento (GNU AGPLv3 para o código-fonte público e EULA/CLC Comercial para binários oficiais na Microsoft Store), suporte exclusivo via e-mail `linceu_lighthouse@outlook.com` conforme disponibilidade e sem obrigação de urgência, além de janelas Modeless Z-Order para Manual e Sobre com referências bibliográficas formais das normas ABNT na aba Terceiros (Notices).
+
+3. LIMITAÇÃO DE USO EM PRODUÇÃO E ISENÇÃO LEGAL DO AUTOR
+------------------------------------------------------------------------------------
+O software NÃO serve como ferramenta definitiva para decisões de engenharia, projetos executivos, laudos ou obras em produção e ambientes de trabalho. Fornecido "no estado em que se encontra" (as-is), todos os resultados devem ser conferidos manualmente e confrontados com ferramentas mais consolidadas no mercado, em observância ao Código Civil Brasileiro e às Seções 15–16 da GNU AGPLv3, eximindo integralmente o autor de responsabilidade legal por qualquer uso indevido ou utilização produtiva não validada por profissional habilitado (ART/RRT).
+====================================================================================

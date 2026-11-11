@@ -1,0 +1,17 @@
+AVISO DE COPYRIGHT E PROTEÇÃO DE MARCA — GEOESTABIL
+==================================================
+
+Versão 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
+Copyright (C) 2025-2026 Fernando Nillsson Cidade. Todos os direitos reservados.
+
+O software GeoEstabil (geoestabil.exe e geoestabil-cli.exe) e sua documentação original associada são de propriedade intelectual de Fernando Nillsson Cidade. A proteção de copyright abrange o código-fonte original do programa em Rust, a arquitetura, a interface gráfica 2D, os diagramas vetoriais, os textos, os manuais e a descrição do projeto.
+
+O código-fonte público é licenciado sob a GNU Affero General Public License v3 (GNU AGPLv3), sendo livre o uso, estudo, cópia, modificação, compilação e distribuição desde que mantidos os créditos de autoria original e disponibilizado o código derivado sob a mesma licença GNU AGPLv3. Binários comerciais oficiais na Microsoft Store são regidos pelo EULA e CLC.
+
+Todas as bibliotecas, crates Rust e dependências de terceiros (incluindo egui, eframe, wgpu, rayon, rusqlite, SQLite, serde, chrono, rfd, image, windows-sys, etc.) pertencem aos seus respectivos autores e detentores de direitos autorais, sendo utilizadas sob os termos de suas respectivas licenças permissivas ou Domínio Público, conforme detalhado em NOTICES e src/assets/LICENSES/.
+
+O nome "GeoEstabil" é marca pertencente a Fernando Nillsson Cidade. O uso não autorizado do nome, logotipo ou material distintivo do projeto para identificar ou sugerir endosso oficial a produtos derivados ou forks sem autorização prévia é proibido, conforme a Seção 7(e) da licença GNU AGPLv3.
+
+As normas técnicas ABNT (NBR 11682, NBR 6122, NBR 6118, NBR 6484 e correlatas) pertencem exclusivamente à ABNT (https://www.abnt.org.br); o GeoEstabil não possui vínculo nem endosso da ABNT e não distribui textos normativos oficiais.
+
+Aviso de Uso e Isenção: O GeoEstabil é uma ferramenta auxiliar para estudo acadêmico e simulação preliminar, fornecida "no estado em que se encontra" (as-is) e sujeita a possíveis erros. Não substitui conferência manual, ferramentas mais consolidadas no mercado nem profissional habilitado (ART/RRT), ficando o autor isento de responsabilidade por qualquer uso indevido ou utilização em produção sem validação externa. Suporte exclusivamente via e-mail linceu_lighthouse@outlook.com, conforme disponibilidade do autor, sem obrigação de urgência.

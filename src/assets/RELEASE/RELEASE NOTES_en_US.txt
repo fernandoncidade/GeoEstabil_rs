@@ -1,0 +1,35 @@
+====================================================================================
+RELEASE NOTES — GEOESTABIL
+Version: 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
+Channels: GitHub Source (GNU AGPLv3) & Microsoft Store MSIX (Commercial EULA / CLC)
+====================================================================================
+
+HIGHLIGHTS IN VERSION 2026.11.11.0 (INITIAL COMMERCIAL & OPEN-SOURCE RELEASE)
+------------------------------------------------------------------------------------
+
+1. RAYON MULTI-THREADED SLOPE STABILITY SOLVER (ABNT NBR 11682:2009)
+• Implemented Limit Equilibrium methods: Ordinary (Fellenius), Simplified Bishop (iterative m_alpha convergence with >= 0.20 numerical guard), and Simplified Janbu (shape factor f0).
+• Parallel Rayon work-stealing grid sweeps across parameterized meshes (centers x_c, y_c and radii R), evaluating tens of thousands of candidate circular slip surfaces on CPU.
+• Interactive 2D Canvas in egui/wgpu featuring automatic responsive resizing, cursor-centered Zoom, drag Pan, thermal Factor of Safety Heatmap overlay, and critical circle highlighting displaying vertical slices.
+• Support for multi-layer stratigraphy, phreatic water table (u = gamma_w * h_w), distributed surface surcharge, and required Factors of Safety (High 1.50 / Medium 1.30 / Low 1.20).
+
+2. INTEGRATED RETAINING WALL MODULE (ABNT NBR 6122:2022 AND NBR 6118:2023)
+• Complete geometries: Gravity Wall (Cyclopean Concrete), Stepped Gabion Wall, and Reinforced Concrete Cantilever Wall (Stem + Toe + Heel).
+• Active and Passive Earth Pressure theories: Rankine (horizontal and inclined backfill) and Coulomb (with wall-soil friction angle delta and inclined backface).
+• External Geotechnical Stability Checks: Overturning (FS_overturning >= 1.50), Base Sliding (FS_sliding >= 1.50), Base Eccentricity (e <= B/6 middle-third kern) and maximum soil stress with trapezoidal or redistributed triangular diagram (2*N / (3*x_R)), plus Hansen / Meyerhof bearing capacity.
+• Reinforced Concrete Structural Design (NBR 6118:2023): Partial safety factors gamma_f = 1.40, gamma_c = 1.40, gamma_s = 1.15, and CAA concrete cover; main flexural reinforcement plus minimum rebar (0.15%), ductility check x/d <= 0.45, unreinforced shear check (V_Rd1 >= V_d), and ELS-W crack-width check (w_k <= 0.30 mm).
+
+3. BIBLIOGRAPHIC REFERENCES, MODELESS DIALOGS & MATHEMATICAL TYPOGRAPHY
+• Independent Modeless Z-Order windows on Windows 11/10: Complete User Manual (F1 / Ctrl+M) with search, Markdown export, stacked fractions, subscripts, superscripts, and formatted tables (`doc_renderer.rs`); and 9-tab legal and technical About Dialog (Ctrl+I) with instant document search and formal bibliographic references to ABNT NBR 11682:2009, NBR 6122:2022, NBR 6118:2023, and allied standards under Third-Party Notices.
+• Instant live runtime switching for language (Portuguese-BR / English-US) and high-contrast Light/Dark themes across every widget and dialog window.
+• Local `.geoestabil` persistence, `%APPDATA%\GeoEstabil\geoestabil.db` SQLite database, HTML5/PDF, Markdown (`.md`), and SVG (`.svg`) reports, plus command-line utility (CLI) `geoestabil-cli.exe`.
+
+4. DUAL LICENSING, LOCAL PRIVACY & EMAIL-ONLY SUPPORT
+• Public source code on GitHub under GNU AGPLv3 (`AGPL-3.0-only`, with Section 7(e) brand and trademark protection).
+• Commercial binaries distributed on the Microsoft Store (MSIX package) governed by our EULA (`src/assets/EULA/`) and CLC (`src/assets/CLC/`), preserving non-waivable statutory rights where applicable.
+• 100% local offline execution with zero telemetry; any user assistance is provided exclusively via email (`linceu_lighthouse@outlook.com`) according to the author's availability and with no obligation of urgency.
+
+5. NOTICE: ACADEMIC STUDY USE, EXTERNAL VERIFICATION & DISCLAIMER
+• GeoEstabil is an auxiliary tool intended exclusively for academic study, teaching, and computational experimentation, and may contain calculation bugs or numerical limitations. It MUST NOT be used as definitive software in production, real construction works, or professional projects without complete manual verification, cross-checking against established market tools, and oversight by a licensed professional.
+• Provided strictly "AS IS" without warranties of any kind; the author assumes no liability for improper use or production deployment at the user's sole risk.
+====================================================================================

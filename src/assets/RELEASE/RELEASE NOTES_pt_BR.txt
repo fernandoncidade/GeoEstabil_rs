@@ -1,0 +1,35 @@
+====================================================================================
+NOTAS DE LANÇAMENTO (RELEASE NOTES) — GEOESTABIL
+Versão: 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
+Canais: Código-Fonte GitHub (GNU AGPLv3) & Microsoft Store MSIX (EULA / CLC Comercial)
+====================================================================================
+
+DESTAQUES DA VERSÃO 2026.11.11.0 (LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE)
+------------------------------------------------------------------------------------
+
+1. MOTOR DE ESTABILIDADE DE TALUDES MULTITHREADED RAYON (ABNT NBR 11682:2009)
+• Métodos implementados: Fellenius (Ordinário), Bishop Simplificado (convergência iterativa com guarda de m_alpha >= 0,20) e Janbu Simplificado (fator de forma f0).
+• Varredura paralela Rayon em malhas parametrizadas (centros x_c, y_c e raios R), avaliando dezenas de milhares de superfícies circulares potenciais em CPU.
+• Canvas 2D interativo em egui/wgpu com redimensionamento responsivo automático, Zoom centrado no cursor, Pan por arraste, Heatmap térmico do Fator de Segurança e destaque do círculo crítico com exibição das fatias verticais.
+• Suporte a camadas estratigráficas múltiplas, lençol freático (u = gamma_w * h_w), sobrecarga distribuída e graus de segurança (Alto 1,50 / Médio 1,30 / Baixo 1,20).
+
+2. MÓDULO INTEGRADO DE MUROS DE ARRIMO (ABNT NBR 6122:2022 E NBR 6118:2023)
+• Geometrias completas: Muro de Gravidade (Concreto Ciclópico), Muro de Gabião Escalonado e Muro de Flexão em Concreto Armado (Fuste + Ponta + Calcanhar).
+• Teorias de Empuxo Ativo e Passivo: Rankine (talude horizontal e inclinado) e Coulomb (com atrito solo-muro delta e face inclinada).
+• Verificações Geotécnicas Externas: Tombamento (FS_tomb >= 1,50), Deslizamento na base (FS_desl >= 1,50), Excentricidade (e <= B/6 no núcleo central) e tensão máxima com diagrama trapezoidal ou triangular redistribuído (2*N / (3*x_R)), além de capacidade de carga via formulação de Hansen / Meyerhof.
+• Dimensionamento Estrutural em Concreto Armado (NBR 6118:2023): Coeficientes parciais gamma_f = 1,40, gamma_c = 1,40, gamma_s = 1,15 e cobrimento CAA; armadura de flexão principal e armadura mínima (0,15%), verificação de ductilidade x/d <= 0,45, cortante sem estribos (V_Rd1 >= V_d) e verificação de fissuração ELS-W (w_k <= 0,30 mm).
+
+3. REFERÊNCIAS BIBLIOGRÁFICAS, DIÁLOGOS MODELESS E FORMATAÇÃO MATEMÁTICA
+• Janelas não-modais independentes (Modeless Z-Order) no Windows 11/10: Manual de Instruções Completo (F1 / Ctrl+M) com busca, exportação Markdown, frações empilhadas, índices subscritos, expoentes e tabelas formatadas (`doc_renderer.rs`); e Janela Sobre (Ctrl+I) com 9 abas jurídicas e técnicas completas, pesquisa instantânea e referências bibliográficas formais das normas ABNT NBR 11682:2009, NBR 6122:2022, NBR 6118:2023 e normas correlatas na aba Terceiros (Notices).
+• Troca dinâmica instantânea em tempo de execução para idioma (Português-BR / English-US) e tema Escuro/Claro de alto contraste em todos os controles e caixas de diálogo.
+• Persistência local `.geoestabil`, banco `%APPDATA%\GeoEstabil\geoestabil.db`, memoriais HTML5/PDF, Markdown (`.md`) e SVG (`.svg`), além do utilitário de linha de comando (CLI) `geoestabil-cli.exe`.
+
+4. DUPLO LICENCIAMENTO, PRIVACIDADE LOCAL E SUPORTE POR E-MAIL
+• Código-fonte público no GitHub sob GNU AGPLv3 (`AGPL-3.0-only`, com proteção de nome e marca sob a Seção 7e).
+• Binários comerciais distribuídos na Microsoft Store (pacote MSIX) regidos por EULA (src/assets/EULA/) e CLC (src/assets/CLC/), preservando direitos legais irrenunciáveis aplicáveis.
+• Execução 100% local e offline com zero telemetria; eventual atendimento ao usuário ocorre exclusivamente via e-mail (`linceu_lighthouse@outlook.com`) conforme a disponibilidade do autor e sem obrigação de urgência.
+
+5. ADVERTÊNCIA: FINS DE ESTUDO ACADÊMICO, CONFERÊNCIA EXTERNA E ISENÇÃO
+• O GeoEstabil é uma ferramenta auxiliar voltada exclusivamente para estudo acadêmico, ensino e experimentação computacional, podendo conter erros de cálculo ou limitações numéricas. NÃO deve ser utilizado como software definitivo em produção, obras ou projetos reais sem conferência manual completa, validação cruzada em outras ferramentas consolidadas de mercado e supervisão de profissional legalmente habilitado.
+• Fornecido no estado em que se encontra ("AS IS"), sem garantias de qualquer natureza; o autor exime-se integralmente de responsabilidade por uso indevido ou utilização produtiva por conta e risco do usuário.
+====================================================================================

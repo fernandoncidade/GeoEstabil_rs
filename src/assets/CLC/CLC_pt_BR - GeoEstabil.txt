@@ -1,0 +1,64 @@
+TERMOS DE LICENCIAMENTO COMERCIAL E DISTRIBUIÇÃO MICROSOFT STORE — GEOESTABIL
+Versão 2026.11.11.0, 11 de novembro de 2026
+Autor e Titular: Fernando Nillsson Cidade (Desenvolvedor Independente, Pessoa Física)
+Canal Oficial de Atendimento: linceu_lighthouse@outlook.com
+Canal Oficial de Distribuição Comercial: Microsoft Store
+
+================================================================================
+1. TITULARIDADE E NATUREZA DO DESENVOLVIMENTO
+================================================================================
+
+1.1. O software GeoEstabil (executáveis geoestabil.exe e geoestabil-cli.exe, além de sua documentação original) é obra intelectual de titularidade exclusiva de Fernando Nillsson Cidade, pessoa física e desenvolvedor independente, protegido pela Lei de Software (Lei Federal nº 9.609/1998) e pela Lei de Direitos Autorais (Lei nº 9.610/1998).
+
+1.2. O desenvolvedor atua exclusivamente como pessoa física, não constituindo instituição financeira ou pessoa jurídica mercantil. Não há cobrança direta de juros de mora, multas ou faturamento direto por meios bancários paralelos (como PIX ou boletos emitidos pelo autor).
+
+================================================================================
+2. DISTRIBUIÇÃO COMERCIAL VIA MICROSOFT STORE
+================================================================================
+
+2.1. A comercialização oficial da versão compilada (binário executável) do GeoEstabil é realizada prioritariamente através da plataforma digital Microsoft Store.
+
+2.2. O processamento de pagamentos, cobranças, reembolsos, conversões de moeda e a gestão do direito de instalação em múltiplos dispositivos Windows vinculados à conta do usuário são operados diretamente pela infraestrutura da Microsoft Corporation segundo os termos da Microsoft Store e sua Declaração de Privacidade (https://www.microsoft.com/pt-br/privacy/privacystatement).
+
+2.3. A aquisição comercial através da Microsoft Store garante ao adquirente o direito de utilizar a aplicação em conformidade com o EULA comercial, incluindo atualizações automáticas da loja quando publicadas pelo autor e isenção de obrigações copyleft da licença GNU AGPLv3 para uso interno.
+
+================================================================================
+3. CONVIVÊNCIA COM A EDIÇÃO OPEN SOURCE (GNU AGPLv3)
+================================================================================
+
+3.1. A distribuição comercial na Microsoft Store coexiste com a disponibilização pública do código-fonte no repositório GitHub sob a licença GNU Affero General Public License v3 (GNU AGPLv3).
+
+3.2. Os usuários e desenvolvedores que não desejarem adquirir a versão comercial na Microsoft Store têm pleno direito legal de obter o código-fonte, auditá-lo, compilar suas próprias versões, modificá-las e utilizá-las gratuitamente, devendo manter estrita observância às cláusulas de compartilhamento, atribuição e reciprocidade da GNU AGPLv3, bem como à reserva da marca "GeoEstabil" (Seção 7(e)).
+
+================================================================================
+4. ESCOPO E LIMITAÇÕES DO SUPORTE TÉCNICO
+================================================================================
+
+4.1. Por tratar-se de projeto pessoal e independente mantido individualmente pelo desenvolvedor, todo atendimento e suporte técnico aos adquirentes da Microsoft Store e usuários da comunidade é prestado exclusivamente via e-mail oficial: linceu_lighthouse@outlook.com.
+
+4.2. LIMITAÇÕES EXPRESSAS DE ATENDIMENTO:
+- NÃO é fornecido suporte por telefone, chat ou vídeo;
+- NÃO é fornecido acesso remoto a computadores ou servidores de usuários;
+- NÃO é fornecida consultoria técnica de engenharia nem revisão de projetos/ART;
+- NÃO há compromisso com SLA (Acordo de Nível de Serviço) comercial, prazo fixo ou obrigação de atendimento urgente/imediato;
+- O atendimento por e-mail ocorre no regime de melhor esforço razoável (best-effort), estritamente conforme a disponibilidade do mantenedor.
+
+================================================================================
+5. PROTEÇÃO DE DADOS PESSOAIS E PRIVACIDADE (LGPD - LEI Nº 13.709/2018)
+================================================================================
+
+5.1. O GeoEstabil foi estruturado sob o conceito de Privacidade Local (Local-First) e operação 100% offline. O autor não coleta, não armazena em servidores remotos e não trata dados pessoais, telemétricos ou de faturamento, permanecendo o banco geoestabil.db exclusivamente no computador do usuário.
+
+5.2. Dados cadastrais e financeiros coletados durante o ato de compra na Microsoft Store são de responsabilidade exclusiva da Microsoft Corporation, aplicando-se a Declaração de Privacidade da referida plataforma (https://www.microsoft.com/pt-br/privacy/privacystatement).
+
+================================================================================
+6. FINALIDADE AUXILIAR, ISENÇÃO POR USO INDEVIDO E LIMITAÇÃO DE RESPONSABILIDADE
+================================================================================
+
+6.1. O GeoEstabil é uma ferramenta computacional auxiliar voltada exclusivamente a estudo acadêmico, pesquisa educacional e simulação preliminar. Por sua natureza, pode conter erros de código, limitações algorítmicas ou simplificações, NÃO constituindo software definitivo ou certificado para decisões reais em produção, obras civis, laudos periciais ou projetos executivos. Todos os resultados exigem conferência manual e validação em ferramentas consolidadas no mercado, além de ensaios geotécnicos e acompanhamento por engenheiro habilitado (ART/RRT).
+
+6.2. As normas técnicas da ABNT citadas apenas como referência metodológica pertencem exclusivamente à ABNT; este software não tem vínculo ou endosso da ABNT.
+
+6.3. Nos termos do Código Civil Brasileiro e das Seções 15 e 16 da GNU AGPLv3, o software é fornecido "no estado em que se encontra" (as-is) e "com todas as falhas". Qualquer utilização definitiva em produção ou sem conferência externa independente configura uso indevido por conta e risco exclusivos do usuário, isentando integralmente o desenvolvedor por danos diretos, indiretos, estruturais, geotécnicos, incompatibilidades, falhas de hardware, lucros cessantes, perdas de negócios, corrupção de arquivos ou quaisquer outros prejuízos decorrentes de utilização fora deste escopo de estudo acadêmico.
+
+6.4. A responsabilidade do desenvolvedor perante o usuário adquirente da versão comercial, se houver condenação judicial definitiva não excluída por lei, limitar-se-á estritamente ao valor pago pela aquisição da licença na Microsoft Store.

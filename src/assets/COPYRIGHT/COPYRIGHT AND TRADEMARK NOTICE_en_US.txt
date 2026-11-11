@@ -1,0 +1,17 @@
+COPYRIGHT AND BRAND PROTECTION NOTICE — GEOESTABIL
+==================================================
+
+Version 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
+Copyright (C) 2025-2026 Fernando Nillsson Cidade. All rights reserved.
+
+The GeoEstabil software (geoestabil.exe and geoestabil-cli.exe) and its associated original documentation are the intellectual property of Fernando Nillsson Cidade. Copyright protection covers the original Rust source code, architecture, 2D graphical interface, vector diagrams, texts, manuals, and project description.
+
+The public source code is licensed under the GNU Affero General Public License v3 (GNU AGPLv3), granting freedom to use, study, copy, modify, compile, and distribute provided original authorship credits are preserved and derivative source code is made available under the same GNU AGPLv3 license. Official commercial binaries on the Microsoft Store are governed by the EULA and CLC.
+
+All third-party libraries, Rust crates, and dependencies (including egui, eframe, wgpu, rayon, rusqlite, SQLite, serde, chrono, rfd, image, windows-sys, etc.) belong to their respective authors and copyright holders under their respective permissive licenses or Public Domain, as detailed in NOTICES and src/assets/LICENSES/.
+
+The name "GeoEstabil" is a mark belonging to Fernando Nillsson Cidade. Unauthorized use of the name, logo, or distinctive branding of the project to identify or imply official endorsement of derivative works or forks without prior written permission is prohibited pursuant to Section 7(e) of the GNU AGPLv3 license.
+
+ABNT technical standards (NBR 11682, NBR 6122, NBR 6118, NBR 6484, and related publications) belong exclusively to ABNT (https://www.abnt.org.br); GeoEstabil has no affiliation with or endorsement from ABNT and does not distribute official standard texts.
+
+Usage & Liability Disclaimer: GeoEstabil is an auxiliary tool for academic study and preliminary simulation, provided "as is" and subject to potential bugs. It does not replace manual checking, more established market tools, or licensed engineers (ART/RRT), and the author is wholly exempt from liability for any misuse or production use without external verification. Support is exclusively via email linceu_lighthouse@outlook.com, according to author availability, without obligation of urgency.

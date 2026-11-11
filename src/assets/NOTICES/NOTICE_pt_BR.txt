@@ -1,0 +1,53 @@
+====================================================================================
+AVISOS DE TERCEIROS E ATRIBUIÇÕES DE CÓDIGO ABERTO (THIRD-PARTY NOTICES)
+Versão: 2026.11.11.0 | GEOESTABIL
+====================================================================================
+
+O GeoEstabil incorpora bibliotecas de código aberto da comunidade Rust, cujos termos de licença permissivos e direitos autorais originais são integralmente preservados e reproduzidos na pasta `src/assets/LICENSES/`.
+
+1. COMPONENTES CRÍTICOS DE TERCEIROS (GRAFO DE DEPENDÊNCIAS VERIFICADO)
+------------------------------------------------------------------------------------
+• egui / eframe / epaint / emath / ecolor (v0.37.0) — Licença: MIT OR Apache-2.0 | Copyright (C) Emil Ernerfeldt e contribuidores.
+• epaint_default_fonts (v0.37.0) — Licença: (MIT OR Apache-2.0) AND OFL-1.1 AND Ubuntu-font-1.0 | Fontes inclusas: Ubuntu-Light / NotoEmoji / EmojiIcon (SIL OFL 1.1 / Ubuntu 1.0).
+• wgpu / wgpu-core / wgpu-hal / naga (v30.0.1) & winit (v0.30.13) — Licença: MIT OR Apache-2.0 (winit: Apache-2.0) | gfx-rs / rust-windowing.
+• rayon (v1.12.0), rayon-core (v1.13.0) & crossbeam-deque / crossbeam-epoch / crossbeam-utils — Licença: MIT OR Apache-2.0 | Niko Matsakis, Josh Stone e equipe Rayon/Crossbeam.
+• rusqlite (v0.41.1) & libsqlite3-sys (v0.39.1) + SQLite C Engine — Licença: MIT (bindings Rust) + Domínio Público (SQLite) | D. Richard Hipp / equipe SQLite.
+• serde (v1.0.229), serde_json (v1.0.154), chrono (v0.4.45), bytemuck, thiserror, foldhash — Licença: MIT OR Apache-2.0 (foldhash: Zlib).
+• image (v0.25.10) & flate2 / png / miniz_oxide / adler2 — Licença: MIT OR Apache-2.0 (adler2: 0BSD OR MIT OR Apache-2.0).
+• arboard (v3.7.0), clipboard-win (v5.4.3), rfd (v0.17.2), windows-sys (v0.61.2 / v0.62.2), winres (v0.1.12) — Licenças: MIT OR Apache-2.0 (clipboard-win / error-code: BSL-1.0; rfd / winres: MIT).
+• self_cell (v1.3.0) — Licença dual a montante: Apache-2.0 OR GPL-2.0-only (opção eleita formalmente no projeto: Apache-2.0).
+• moxcms (v0.8.1), pxfm (v0.1.30), zerocopy (v0.8.63), libloading (v0.8.9) — Licenças: BSD-3-Clause / BSD-2-Clause OR Apache-2.0 / ISC.
+• Componentes Unicode (icu_*, zerovec, yoke, tinystr, litemap, writeable) — Licença: Unicode-3.0 | Unicode Consortium / contribuidores ICU4X.
+
+2. COMPATIBILIDADE COM O REGIME DE DUPLO LICENCIAMENTO (AGPLv3 + EULA/CLC)
+------------------------------------------------------------------------------------
+Nenhuma dependência de terceiros utilizada na árvore de compilação padrão do GeoEstabil impõe copyleft incompatível com o modelo dual (GNU AGPLv3 no código-fonte público e EULA/CLC Comercial para binários MSIX da Microsoft Store): para `self_cell`, elege-se formalmente a opção permissiva `Apache-2.0`. Os textos integrais das licenças (`MIT`, `Apache-2.0`, `BSD-2-Clause`, `BSD-3-Clause`, `BSL-1.0`, `ISC`, `Zlib`, `SIL OFL-1.1`, `Ubuntu-1.0`, `Unicode-3.0`, `0BSD`, `Unlicense`, Domínio Público e `GNU AGPLv3`) encontram-se em `src/assets/LICENSES/` e na aba "Licenças".
+
+3. REFERÊNCIAS BIBLIOGRÁFICAS DAS NORMAS TÉCNICAS (ABNT) E PROPRIEDADE INTELECTUAL
+------------------------------------------------------------------------------------
+A presente aplicação utiliza exclusivamente como referência metodológica e terminológica as normas técnicas brasileiras abaixo relacionadas (ABNT NBR 6023), sem reproduzir seus textos integrais, tabelas ou figuras:
+
+3.1. Normas Técnicas Principais Aplicáveis ao Motor de Cálculo
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 11682:2009 — Estabilidade de encostas. 2. ed. Rio de Janeiro: ABNT, 21 ago. 2009 (válida a partir de 21 set. 2009). 33 p. ISBN 978-85-07-01702-8. ICS 93.010. Escopo referenciado no projeto: fatores de segurança mínimos (Tabela 1) e fundamentos da análise de estabilidade de taludes em equilíbrio limite.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6122:2022 — Projeto e execução de fundações. 3. ed. (ABNT NBR 6122:2019), incorporando Errata 1 de 15 dez. 2021 e Emenda 1 de 25 mar. 2022. Rio de Janeiro: ABNT, 2022. 108 p. + 2 p. ICS 91.040; 93.010. Escopo referenciado no projeto: verificações geotécnicas externas de fundações rasas e muros de arrimo (tombamento, deslizamento, excentricidade e capacidade de carga).
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6118:2023 — Projeto de estruturas de concreto. 4. ed. (28 ago. 2023; Versão corrigida 2, 30 jan. 2024). Rio de Janeiro: ABNT, 2023/2024. 242 p. ISBN 978-85-07-09632-0. ICS 91.080.40. Escopo referenciado no projeto: coeficientes parciais de segurança, classes de agressividade ambiental, dimensionamento à flexão, força cortante V_Rd1 e abertura de fissuras ELS-W.
+
+3.2. Normas Técnicas Correlatas de Apoio e Terminologia
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6484:2020 — Solo — Sondagem de simples reconhecimento com SPT — Método de ensaio. Rio de Janeiro: ABNT, 2020. (Base das correlações referenciais N_SPT do catálogo SQLite).
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6502:2022 — Solos e rochas — Terminologia. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8036:1983 — Programação de sondagens de simples reconhecimento dos solos para fundações de edifícios — Procedimento. Rio de Janeiro: ABNT, 1983.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6120:2019 — Ações para o cálculo de estruturas de edificações. Rio de Janeiro: ABNT, 2019.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 7480:2022 — Aço destinado às armaduras para estruturas de concreto armado — Especificação. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8681:2003 — Ações e segurança nas estruturas — Procedimento. Rio de Janeiro: ABNT, 2003.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8953:2015 — Concreto para fins estruturais — Classificação pela massa específica, por grupos de resistência e consistência. Rio de Janeiro: ABNT, 2015.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 12655:2022 — Concreto de cimento Portland — Preparo, controle, recebimento e aceitação — Procedimento. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 13133:2021 — Execução de levantamento topográfico — Procedimento. Rio de Janeiro: ABNT, 2021.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 14931:2023 — Execução de estruturas de concreto armado, protendido e com fibras — Requisitos. Rio de Janeiro: ABNT, 2023.
+
+3.3. Aviso de Direitos Autorais Reservados (ABNT)
+Todas as normas técnicas citadas são publicações de propriedade da Associação Brasileira de Normas Técnicas (ABNT) — Todos os direitos reservados. A menos que especificado de outro modo, nenhuma parte dessas publicações pode ser reproduzida ou utilizada por qualquer meio, eletrônico ou mecânico, incluindo fotocópia e microfilme, sem permissão por escrito da ABNT. O GeoEstabil não é afiliado à ABNT e não distribui textos normativos protegidos; usuários e projetistas devem adquirir os textos oficiais diretamente no catálogo da ABNT (https://www.abntcatalogo.com.br).
+
+4. AVISO DE ESTUDO ACADÊMICO, SUPORTE POR E-MAIL E ISENÇÃO DE GARANTIAS
+------------------------------------------------------------------------------------
+O GeoEstabil é uma ferramenta auxiliar voltada exclusivamente para estudo acadêmico, ensino e experimentação computacional, podendo conter erros de cálculo ou limitações numéricas. NÃO deve ser utilizado como software definitivo em produção, projetos executivos, obras ou tomadas de decisão profissionais sem conferência manual completa, validação cruzada em ferramentas consolidadas de mercado e acompanhamento por profissional habilitado. O software é fornecido "no estado em que se encontra" ("AS IS"), sem garantias expressas ou implícitas; o suporte ocorre exclusivamente via e-mail (linceu_lighthouse@outlook.com) conforme a disponibilidade do autor e sem obrigação de urgência, ficando o autor isento de responsabilidade por uso indevido ou aplicação produtiva por conta e risco do usuário.
+====================================================================================

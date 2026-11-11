@@ -1,0 +1,53 @@
+====================================================================================
+THIRD-PARTY SOFTWARE NOTICES AND OPEN-SOURCE ATTRIBUTIONS
+Version: 2026.11.11.0 | GEOESTABIL
+====================================================================================
+
+GeoEstabil incorporates third-party open-source Rust crates whose permissive license terms and original copyright notices are preserved and reproduced in full under `src/assets/LICENSES/`.
+
+1. CORE THIRD-PARTY COMPONENTS (VERIFIED DEPENDENCY TREE)
+------------------------------------------------------------------------------------
+• egui / eframe / epaint / emath / ecolor (v0.37.0) — License: MIT OR Apache-2.0 | Copyright (C) Emil Ernerfeldt and contributors.
+• epaint_default_fonts (v0.37.0) — License: (MIT OR Apache-2.0) AND OFL-1.1 AND Ubuntu-font-1.0 | Bundled fonts: Ubuntu-Light / NotoEmoji / EmojiIcon (SIL OFL 1.1 / Ubuntu 1.0).
+• wgpu / wgpu-core / wgpu-hal / naga (v30.0.1) & winit (v0.30.13) — License: MIT OR Apache-2.0 (winit: Apache-2.0) | gfx-rs / rust-windowing.
+• rayon (v1.12.0), rayon-core (v1.13.0) & crossbeam-deque / crossbeam-epoch / crossbeam-utils — License: MIT OR Apache-2.0 | Niko Matsakis, Josh Stone, and Rayon/Crossbeam contributors.
+• rusqlite (v0.41.1) & libsqlite3-sys (v0.39.1) + SQLite C Engine — License: MIT (Rust bindings) + Public Domain (SQLite) | D. Richard Hipp / SQLite team.
+• serde (v1.0.229), serde_json (v1.0.154), chrono (v0.4.45), bytemuck, thiserror, foldhash — License: MIT OR Apache-2.0 (foldhash: Zlib).
+• image (v0.25.10) & flate2 / png / miniz_oxide / adler2 — License: MIT OR Apache-2.0 (adler2: 0BSD OR MIT OR Apache-2.0).
+• arboard (v3.7.0), clipboard-win (v5.4.3), rfd (v0.17.2), windows-sys (v0.61.2 / v0.62.2), winres (v0.1.12) — Licenses: MIT OR Apache-2.0 (clipboard-win / error-code: BSL-1.0; rfd / winres: MIT).
+• self_cell (v1.3.0) — Dual upstream license: Apache-2.0 OR GPL-2.0-only (permissive option formally elected in this project: Apache-2.0).
+• moxcms (v0.8.1), pxfm (v0.1.30), zerocopy (v0.8.63), libloading (v0.8.9) — Licenses: BSD-3-Clause / BSD-2-Clause OR Apache-2.0 / ISC.
+• Unicode crates (icu_*, zerovec, yoke, tinystr, litemap, writeable) — License: Unicode-3.0 | Unicode Consortium / ICU4X contributors.
+
+2. COMPATIBILITY WITH THE DUAL-LICENSING FRAMEWORK (AGPLv3 + EULA/CLC)
+------------------------------------------------------------------------------------
+No third-party dependency in GeoEstabil's default build tree imposes copyleft obligations incompatible with our dual-licensing model (GNU AGPLv3 for public source code and Commercial EULA/CLC for Microsoft Store MSIX binaries): for `self_cell`, the permissive `Apache-2.0` option is formally elected. Full license texts (`MIT`, `Apache-2.0`, `BSD-2-Clause`, `BSD-3-Clause`, `BSL-1.0`, `ISC`, `Zlib`, `SIL OFL-1.1`, `Ubuntu-1.0`, `Unicode-3.0`, `0BSD`, `Unlicense`, Public Domain, and `GNU AGPLv3`) are included in `src/assets/LICENSES/` and accessible in the "Licenses" tab.
+
+3. BIBLIOGRAPHIC REFERENCES OF TECHNICAL STANDARDS (ABNT) & INTELLECTUAL PROPERTY
+------------------------------------------------------------------------------------
+This application strictly adopts as methodological and terminological engineering references the Brazilian technical standards listed below (ABNT NBR 6023 citations), without reproducing their full texts, tables, or figures:
+
+3.1. Primary Technical Standards Applicable to the Calculation Engine
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 11682:2009 — Estabilidade de encostas (Slope stability). 2nd ed. Rio de Janeiro: ABNT, Aug 21, 2009 (effective Sep 21, 2009). 33 p. ISBN 978-85-07-01702-8. ICS 93.010. Referenced scope in project: minimum safety factor criteria (Table 1) and limit-equilibrium slope stability evaluation concepts.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6122:2022 — Projeto e execução de fundações (Design and construction of foundations). 3rd ed. (ABNT NBR 6122:2019), incorporating Erratum 1 (Dec 15, 2021) and Amendment 1 (Mar 25, 2022). Rio de Janeiro: ABNT, 2022. 108 p. + 2 p. ICS 91.040; 93.010. Referenced scope in project: external geotechnical checks for shallow foundations and retaining walls (overturning, sliding, base eccentricity, and bearing capacity).
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6118:2023 — Projeto de estruturas de concreto (Design of concrete structures). 4th ed. (Aug 28, 2023; Corrected Version 2, Jan 30, 2024). Rio de Janeiro: ABNT, 2023/2024. 242 p. ISBN 978-85-07-09632-0. ICS 91.080.40. Referenced scope in project: partial safety factors, environmental aggressiveness classes, flexural design, unreinforced shear V_Rd1, and ELS-W crack width control.
+
+3.2. Allied & Supporting Technical Reference Standards
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6484:2020 — Soil — Standard penetration test (SPT) — Test method. Rio de Janeiro: ABNT, 2020. (Reference basis for SPT correlations in the local SQLite catalog).
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6502:2022 — Soils and rocks — Terminology. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8036:1983 — Programming of soil boring investigations for building foundations — Procedure. Rio de Janeiro: ABNT, 1983.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 6120:2019 — Design loads for structures. Rio de Janeiro: ABNT, 2019.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 7480:2022 — Steel for the reinforcement of concrete structures — Specification. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8681:2003 — Actions and safety of structures — Procedure. Rio de Janeiro: ABNT, 2003.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 8953:2015 — Concrete for structural use — Classification by density, strength and consistence classes. Rio de Janeiro: ABNT, 2015.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 12655:2022 — Portland cement concrete — Preparation, control, receiving and acceptance — Procedure. Rio de Janeiro: ABNT, 2022.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 13133:2021 — Topographic surveying execution — Procedure. Rio de Janeiro: ABNT, 2021.
+• ASSOCIAÇÃO BRASILEIRA DE NORMAS TÉCNICAS. ABNT NBR 14931:2023 — Execution of reinforced, prestressed and fiber-reinforced concrete structures — Requirements. Rio de Janeiro: ABNT, 2023.
+
+3.3. Copyright Reservation Notice (ABNT)
+All referenced standards are copyrighted publications of Associação Brasileira de Normas Técnicas (ABNT) — All rights reserved. Unless otherwise specified, no part of these publications may be reproduced or utilized by any form or by any means, electronic or mechanical, including photocopying and microfilm, without permission in writing from ABNT. GeoEstabil is not affiliated with ABNT and does not distribute protected standard texts; users and design engineers should acquire official standard editions directly from the ABNT catalog (https://www.abntcatalogo.com.br).
+
+4. ACADEMIC STUDY USE, EMAIL-ONLY SUPPORT & WARRANTY DISCLAIMER
+------------------------------------------------------------------------------------
+GeoEstabil is an auxiliary tool intended exclusively for academic study, teaching, and computational experimentation, and may contain calculation bugs or numerical limitations. It MUST NOT be used as definitive software in production, construction designs, engineering works, or professional decision-making without complete manual verification, cross-checking against established market tools, and oversight by a licensed professional. The software is provided strictly "AS IS" without express or implied warranties; support is provided exclusively via email (linceu_lighthouse@outlook.com) according to the author's availability and with no obligation of urgency, and the author assumes no liability for improper use or production deployment at the user's sole risk.
+====================================================================================

@@ -1,0 +1,64 @@
+CONTRATO DE LICENÇA DE USUÁRIO FINAL (EULA) — GEOESTABIL
+Versão 2026.11.11.0, 11 de novembro de 2026
+Autor e Desenvolvedor: Fernando Nillsson Cidade (Pessoa Física)
+Contato Oficial de Suporte (Exclusivo por E-mail): linceu_lighthouse@outlook.com
+
+================================================================================
+1. MODELO DE DUPLO LICENCIAMENTO (DUAL-LICENSING FRAMEWORK)
+================================================================================
+
+O projeto GEOESTABIL é distribuído sob um modelo transparente de Duplo Licenciamento:
+
+A. EDIÇÃO DE CÓDIGO ABERTO (COMUNITÁRIA - GNU AGPLv3):
+O código-fonte completo deste software é publicado sob os termos da GNU Affero General Public License versão 3 (AGPLv3). Qualquer pessoa tem a liberdade de estudar, auditar, modificar, compilar e redistribuir o código-fonte, desde que mantenha a mesma licença AGPLv3, os devidos créditos de autoria original e respeite a proteção nominal da marca "GeoEstabil" prevista na Seção 7(e).
+
+B. EDIÇÃO COMERCIAL E BINÁRIOS OFICIAIS (MICROSOFT STORE & DISTRIBUIÇÃO DIRETA):
+O presente EULA aplica-se exclusivamente aos usuários finais que adquirem ou instalam as versões compiladas (binários) oficiais disponibilizadas comercialmente através da Microsoft Store ou por autorização comercial direta do autor.
+
+================================================================================
+2. CONCESSÃO DE LICENÇA COMERCIAL (MICROSOFT STORE)
+================================================================================
+
+2.1. Ao adquirir ou instalar a versão oficial compilada do GeoEstabil através da Microsoft Store, o Licenciador (Fernando Nillsson Cidade) concede a você (pessoa física ou jurídica) uma licença comercial de uso pessoal ou corporativo nos dispositivos Windows compatíveis vinculados à sua conta Microsoft, nos termos das políticas de distribuição da Microsoft Store.
+
+2.2. ISENÇÃO DE COPYLEFT PARA O BINÁRIO COMERCIAL: A utilização do executável binário oficial adquirido comercialmente na Microsoft Store isenta o usuário das obrigações de disponibilização de código-fonte previstas na Seção 13 da GNU AGPLv3 para suas operações e modificações locais de uso interno.
+
+2.3. PRESERVAÇÃO DOS DIREITOS OPEN SOURCE: Nada neste EULA restringe, anula ou revoga os direitos de terceiros de obterem, compilarem, modificarem e utilizarem o código-fonte disponível publicamente no repositório oficial sob os termos e condições da GNU AGPLv3.
+
+================================================================================
+3. SUPORTE TÉCNICO E ATUALIZAÇÕES
+================================================================================
+
+3.1. O suporte técnico é prestado pelo desenvolvedor (pessoa física independente) EXCLUSIVAMENTE por meio do endereço de e-mail oficial: linceu_lighthouse@outlook.com, estritamente no regime de melhor esforço (best-effort basis), CONFORME A SUA DISPONIBILIDADE e SEM OBRIGAÇÃO DE URGÊNCIA, prazo mínimo ou SLA fixo.
+
+3.2. Não estão contemplados serviços de suporte telefônico, consultoria de engenharia personalizada presencial ou remota, revisão de projetos ou ART, SLA corporativo em tempo integral nem acesso remoto a dispositivos do usuário.
+
+3.3. Atualizações e melhorias de versão podem ser disponibilizadas periodicamente através da plataforma Microsoft Store ou do repositório oficial, a exclusivo critério do autor.
+
+================================================================================
+4. PRIVACIDADE E SOBERANIA DOS DADOS (LOCAL-FIRST)
+================================================================================
+
+4.1. O GeoEstabil opera sob o princípio estrito de Privacidade Local (Local-First): todo o processamento numérico, catálogo de solos (`geoestabil.db`) e geração de arquivos ocorre 100% offline no dispositivo do usuário. Nenhuma informação pessoal ou de projeto é enviada a servidores remotos pelo autor. Faturamento na loja, compras na plataforma e diagnósticos do Windows são regidos de forma independente pela Declaração de Privacidade da Microsoft: https://www.microsoft.com/pt-br/privacy/privacystatement
+
+================================================================================
+5. FINALIDADE AUXILIAR, ISENÇÃO POR USO INDEVIDO E LIMITAÇÃO DE RESPONSABILIDADE
+================================================================================
+
+5.1. O SOFTWARE É FORNECIDO "NO ESTADO EM QUE SE ENCONTRA" (AS-IS), "COM TODAS AS FALHAS" E "CONFORME DISPONIBILIDADE", DESTINADO EXCLUSIVAMENTE A ESTUDO ACADÊMICO, ENSINO E SIMULAÇÃO PRELIMINAR. POR SUA NATUREZA EXPERIMENTAL, PODE CONTER ERROS DE IMPLEMENTAÇÃO, SIMPLIFICAÇÕES OU DIVERGÊNCIAS NUMÉRICAS, NÃO SERVINDO COMO SOFTWARE DEFINITIVO PARA DECISÕES EM PRODUÇÃO, OBRAS OU AMBIENTES REAIS DE TRABALHO.
+
+5.2. O USUÁRIO ASSUME INTEGRALMENTE OS RISCOS QUANTO À UTILIZAÇÃO, CONFERÊNCIA MANUAL OBRIGATÓRIA, VALIDAÇÃO EM OUTRAS FERRAMENTAS CONSOLIDADAS NO MERCADO, ENSAIOS DE CAMPO E RESPONSABILIDADE TÉCNICA PROFISSIONAL (ART/RRT JUNTO AO CREA/CAU). QUALQUER USO DEFINITIVO EM PRODUÇÃO SEM VERIFICAÇÃO EXTERNA INDEPENDENTE CONFIGURA USO INDEVIDO SOB CULPA E RISCO EXCLUSIVOS DO USUÁRIO.
+
+5.3. NOS TERMOS DO CÓDIGO CIVIL BRASILEIRO E DAS SEÇÕES 15 E 16 DA GNU AGPLv3, EM NENHUMA HIPÓTESE O LICENCIADOR SERÁ RESPONSÁVEL POR QUAISQUER DANOS DIRETOS, INDIRETOS, INCIDENTAIS, ESPECIAIS, PUNITIVOS OU CONSEQUENCIAIS, INCLUINDO, SEM LIMITAÇÃO, DANOS ESTRUTURAIS OU GEOTÉCNICOS, PERDA DE LUCROS, INTERRUPÇÃO DE NEGÓCIOS OU PERDA DE DADOS DECORRENTES DO USO, USO INDEVIDO OU INCAPACIDADE DE USO DESTE SOFTWARE, RESSALVADOS EVENTUAIS DIREITOS LEGAIS IRRENUNCIÁVEIS QUANDO APLICÁVEIS.
+
+5.4. AS NORMAS DA ABNT CITADAS SÃO DE TITULARIDADE EXCLUSIVA DA ABNT; ESTE SOFTWARE NÃO POSSUI VÍNCULO, CERTIFICAÇÃO OU ENDOSSO DA ABNT.
+
+5.5. A responsabilidade total do Licenciador por eventuais danos comprovados perante o adquirente da versão comercial na Microsoft Store, caso não afastada por lei, limita-se estritamente ao valor efetivamente pago pela licença do aplicativo na referida loja.
+
+================================================================================
+6. LEGISLAÇÃO APLICÁVEL E FORO
+================================================================================
+
+6.1. O presente contrato é regido primordialmente pela legislação da República Federativa do Brasil (Lei nº 9.609/1998, Lei nº 10.406/2002 e Lei nº 12.965/2014).
+
+6.2. Para a resolução de quaisquer controvérsias decorrentes deste EULA, as partes elegem o foro da comarca do domicílio do autor, ressalvadas as disposições protetivas de ordem pública internacionalmente aplicáveis às vendas da plataforma Microsoft Store.

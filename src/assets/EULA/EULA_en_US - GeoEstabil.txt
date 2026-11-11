@@ -1,0 +1,64 @@
+END USER LICENSE AGREEMENT (EULA) — GEOESTABIL
+Version 2026.11.11.0, November 11, 2026
+Author and Developer: Fernando Nillsson Cidade (Natural Person)
+Official Support Contact (Email Only): linceu_lighthouse@outlook.com
+
+================================================================================
+1. DUAL-LICENSING FRAMEWORK
+================================================================================
+
+The GEOESTABIL project is distributed under a transparent Dual-Licensing model:
+
+A. OPEN SOURCE EDITION (COMMUNITY - GNU AGPLv3):
+The complete source code of this software is published under the terms of the GNU Affero General Public License version 3 (AGPLv3). Anyone has the freedom to study, audit, modify, compile, and redistribute the source code, provided they maintain the same AGPLv3 license, proper attribution to original authorship, and respect the "GeoEstabil" brand reservation under Section 7(e).
+
+B. COMMERCIAL EDITION AND OFFICIAL BINARIES (MICROSOFT STORE & DIRECT DISTRIBUTION):
+This EULA applies exclusively to end users who acquire or install the official compiled versions (binaries) made available commercially through the Microsoft Store or by direct commercial authorization from the author.
+
+================================================================================
+2. COMMERCIAL LICENSE GRANT (MICROSOFT STORE)
+================================================================================
+
+2.1. Upon purchasing or installing the official compiled version of GeoEstabil through the Microsoft Store, the Licensor (Fernando Nillsson Cidade) grants you (an individual or legal entity) a commercial license for personal or corporate use on compatible Windows devices linked to your Microsoft account, under the terms of Microsoft Store distribution policies.
+
+2.2. COPYLEFT EXEMPTION FOR THE COMMERCIAL BINARY: The use of the official binary executable purchased commercially on the Microsoft Store exempts the user from the source code availability obligations set forth in Section 13 of the GNU AGPLv3 for their internal local operations and modifications.
+
+2.3. PRESERVATION OF OPEN SOURCE RIGHTS: Nothing in this EULA restricts, annuls, or revokes the rights of third parties to obtain, compile, modify, and use the source code publicly available in the official repository under the terms and conditions of the GNU AGPLv3.
+
+================================================================================
+3. TECHNICAL SUPPORT AND UPDATES
+================================================================================
+
+3.1. Technical support is provided by the developer (an independent natural person) EXCLUSIVELY through the official email address: linceu_lighthouse@outlook.com, strictly on a reasonable best-effort basis, ACCORDING TO THE AUTHOR'S AVAILABILITY and WITH NO OBLIGATION OF URGENCY, minimum timeline, or fixed SLA.
+
+3.2. Services such as telephone support, personalized in-person or remote engineering consulting, project or ART review, full-time corporate SLA, or remote device access are not included.
+
+3.3. Updates and version improvements may be made available periodically through the Microsoft Store platform or the official repository, at the author's sole discretion.
+
+================================================================================
+4. PRIVACY AND DATA SOVEREIGNTY (LOCAL-FIRST)
+================================================================================
+
+4.1. GeoEstabil operates under the strict principle of Local Privacy (Local-First): all numerical processing, the soil catalog (`geoestabil.db`), and report output occur 100% offline on the user's device. No personal or project information is sent to remote servers by the author. Store billing, platform purchases, and Windows diagnostics are governed independently by the Microsoft Privacy Statement: https://www.microsoft.com/pt-br/privacy/privacystatement
+
+================================================================================
+5. AUXILIARY PURPOSE, MISUSE EXEMPTION AND LIMITATION OF LIABILITY
+================================================================================
+
+5.1. THE SOFTWARE IS PROVIDED "AS IS" (AS-IS), "WITH ALL FAULTS", AND "AS AVAILABLE", INTENDED EXCLUSIVELY FOR ACADEMIC STUDY, TEACHING, AND PRELIMINARY SIMULATION. OWING TO ITS EXPERIMENTAL NATURE, IT MAY CONTAIN IMPLEMENTATION BUGS, SIMPLIFICATIONS, OR NUMERICAL INACCURACIES, AND DOES NOT SERVE AS DEFINITIVE SOFTWARE FOR DECISIONS IN PRODUCTION, CONSTRUCTION WORKS, OR REAL WORKPLACES.
+
+5.2. THE USER ASSUMES ALL RISKS REGARDING USAGE, MANDATORY MANUAL CHECKING, CROSS-VALIDATION WITH OTHER ESTABLISHED COMMERCIAL TOOLS ON THE MARKET, FIELD TESTING, AND LICENSED ENGINEERING RESPONSIBILITY (ART/RRT BEFORE CREA/CAU). ANY DEFINITIVE USE IN PRODUCTION WITHOUT INDEPENDENT EXTERNAL VERIFICATION CONSTITUTES IMPROPER MISUSE AT THE USER'S SOLE FAULT AND RISK.
+
+5.3. UNDER THE BRAZILIAN CIVIL CODE AND SECTIONS 15 AND 16 OF GNU AGPLv3, IN NO EVENT SHALL THE LICENSOR BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL, SPECIAL, PUNITIVE, OR CONSEQUENTIAL DAMAGES, INCLUDING, WITHOUT LIMITATION, STRUCTURAL OR GEOTECHNICAL DAMAGES, LOSS OF PROFITS, BUSINESS INTERRUPTION, OR LOSS OF DATA ARISING FROM USE, MISUSE, OR INABILITY TO USE THIS SOFTWARE, WITHOUT PREJUDICE TO NON-WAIVABLE STATUTORY RIGHTS WHERE APPLICABLE.
+
+5.4. REFERENCED ABNT STANDARDS BELONG EXCLUSIVELY TO ABNT; THIS SOFTWARE HAS NO INSTITUTIONAL AFFILIATION, CERTIFICATION, OR ENDORSEMENT FROM ABNT.
+
+5.5. The total liability of the Licensor for any proven damages toward the purchaser of the commercial version on the Microsoft Store, where not excluded by law, is strictly limited to the amount actually paid for the application license in said store.
+
+================================================================================
+6. APPLICABLE LAW AND FORUM
+================================================================================
+
+6.1. This agreement is governed primarily by the legislation of the Federative Republic of Brazil (Law No. 9,609/1998, Law No. 10,406/2002, and Law No. 12,965/2014).
+
+6.2. For the resolution of any dispute arising from this EULA, the parties elect the courts of the judicial district of the author's domicile, without prejudice to public order protective rules internationally applicable to Microsoft Store sales.
