@@ -483,6 +483,22 @@ pub fn get_all_file_entries(base_dir: &Path) -> Vec<FileEntry> {
     }
     entries.extend(iss_entries);
 
+    // REPO - AppxManifest.xml & GeoEstabil_rs.txt
+    entries.push(FileEntry {
+        key: "repo_appx_manifest".into(),
+        rel_path: "repo/AppxManifest.xml".into(),
+        default_group: "REPO".into(),
+        lang: "all".into(),
+        is_updatable: true,
+    });
+    entries.push(FileEntry {
+        key: "repo_geoestabil_txt".into(),
+        rel_path: "repo/GeoEstabil_rs.txt".into(),
+        default_group: "REPO".into(),
+        lang: "all".into(),
+        is_updatable: true,
+    });
+
     entries
 }
 
@@ -629,6 +645,18 @@ pub fn build_patterns() -> HashMap<String, Vec<&'static str>> {
     map.insert("installer_default".into(), vec![
         r#"(?m)^(#define\s+MyAppVersion\s+"[0-9]+(?:\.[0-9]+){1,3}".*)$"#,
         r#"(?m)^(OutputBaseFilename=GeoEstabil_v(?:\{#MyAppVersion\}|[0-9]+(?:\.[0-9]+){1,3}).*)$"#,
+    ]);
+
+    // REPO (AppxManifest.xml & GeoEstabil_rs.txt)
+    map.insert("repo_appx_manifest".into(), vec![
+        r#"<Identity\b[^>]*?\bVersion="[0-9]+(?:\.[0-9]+){3}""#,
+    ]);
+    map.insert("repo_geoestabil_txt".into(), vec![
+        r#"(?i)docs[/\\]release-v[0-9]+(?:\.[0-9]+){1,3}\.md"#,
+        r#"(?m)^Versão:\s*[0-9]+(?:\.[0-9]+){1,3}\s*\(Cargo:\s*[0-9]+(?:\.[0-9]+){1,2}\)\s*\|\s*Data:\s*.*$"#,
+        r#"(?m)^DESTAQUES DA VERSÃO\s+[0-9]+(?:\.[0-9]+){1,3}\s+\(LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE\)\r?$"#,
+        r#"(?m)^Version:\s*[0-9]+(?:\.[0-9]+){1,3}\s*\(Cargo:\s*[0-9]+(?:\.[0-9]+){1,2}\)\s*\|\s*Date:\s*.*$"#,
+        r#"(?m)^HIGHLIGHTS IN VERSION\s+[0-9]+(?:\.[0-9]+){1,3}\s+\(INITIAL COMMERCIAL & OPEN-SOURCE RELEASE\)\r?$"#,
     ]);
 
     map
@@ -1223,6 +1251,20 @@ pub fn update_manual_versions(text: &str, pt: &LangInput, en: &LangInput) -> Str
         2,
         |old| format_updated_version(old, &en.version),
     );
+    let pt_cargo = cargo_version(&pt.version);
+    let en_cargo = cargo_version(&en.version);
+    updated = replace_regex_capture(
+        &updated,
+        r"(semântica\s*\(`v?)([0-9]+(?:\.[0-9]+){1,2})(`\))",
+        2,
+        &pt_cargo,
+    );
+    updated = replace_regex_capture(
+        &updated,
+        r"(semantic package version\s*\(`v?)([0-9]+(?:\.[0-9]+){1,2})(`\))",
+        2,
+        &en_cargo,
+    );
     updated
 }
 
@@ -1385,6 +1427,77 @@ pub fn update_installer_version(text: &str, version: &str) -> String {
     updated
 }
 
+pub fn appx_version(version: &str) -> String {
+    let plain = plain_version(version);
+    let parts: Vec<&str> = plain.split('.').collect();
+    if parts.len() == 3 {
+        format!("{}.0", plain)
+    } else if parts.len() >= 4 {
+        format!("{}.{}.{}.{}", parts[0], parts[1], parts[2], parts[3])
+    } else {
+        plain
+    }
+}
+
+pub fn update_appx_manifest(text: &str, version: &str) -> String {
+    let appx_ver = appx_version(version);
+    replace_regex_capture(
+        text,
+        r#"(?m)(<Identity\b[^>]*?\bVersion=")([^"]+)(")"#,
+        2,
+        &appx_ver,
+    )
+}
+
+pub fn update_geoestabil_txt(text: &str, pt: &LangInput, en: &LangInput) -> String {
+    let pt_ver = plain_version(&pt.version);
+    let en_ver = plain_version(&en.version);
+    let pt_cargo = cargo_version(&pt.version);
+    let en_cargo = cargo_version(&en.version);
+    let pt_date = format_pt_date(pt.day, pt.month_index, pt.year);
+    let en_date = format_en_date(en.day, en.month_index, en.year);
+
+    let mut updated = text.to_string();
+
+    // 1. docs\release-v<ver>.md or docs/release-v<ver>.md
+    updated = replace_regex_capture(
+        &updated,
+        r#"(docs[/\\]release-v)([0-9]+(?:\.[0-9]+){1,3})(\.md)"#,
+        2,
+        &pt_ver,
+    );
+
+    // 2. Versão: <ver> (Cargo: <cargo>) | Data: <date>
+    updated = replace_with_caps(
+        &updated,
+        r#"(?m)^(Versão:\s*)([0-9]+(?:\.[0-9]+){1,3})(\s*\(Cargo:\s*)([0-9]+(?:\.[0-9]+){1,2})(\)\s*\|\s*Data:\s*)([^\r\n]+)(\r?$)"#,
+        |caps| format!("{}{}{}{}{}{}{}", &caps[1], pt_ver, &caps[3], pt_cargo, &caps[5], pt_date, &caps[7]),
+    );
+
+    // 3. DESTAQUES DA VERSÃO <ver> (LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE)
+    updated = replace_with_caps(
+        &updated,
+        r#"(?m)^(DESTAQUES DA VERSÃO\s+)([0-9]+(?:\.[0-9]+){1,3})(\s+\(LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE\)\r?$)"#,
+        |caps| format!("{}{}{}", &caps[1], pt_ver, &caps[3]),
+    );
+
+    // 4. Version: <ver> (Cargo: <cargo>) | Date: <date>
+    updated = replace_with_caps(
+        &updated,
+        r#"(?m)^(Version:\s*)([0-9]+(?:\.[0-9]+){1,3})(\s*\(Cargo:\s*)([0-9]+(?:\.[0-9]+){1,2})(\)\s*\|\s*Date:\s*)([^\r\n]+)(\r?$)"#,
+        |caps| format!("{}{}{}{}{}{}{}", &caps[1], en_ver, &caps[3], en_cargo, &caps[5], en_date, &caps[7]),
+    );
+
+    // 5. HIGHLIGHTS IN VERSION <ver> (INITIAL COMMERCIAL & OPEN-SOURCE RELEASE)
+    updated = replace_with_caps(
+        &updated,
+        r#"(?m)^(HIGHLIGHTS IN VERSION\s+)([0-9]+(?:\.[0-9]+){1,3})(\s+\(INITIAL COMMERCIAL & OPEN-SOURCE RELEASE\)\r?$)"#,
+        |caps| format!("{}{}{}", &caps[1], en_ver, &caps[3]),
+    );
+
+    updated
+}
+
 pub fn apply_updates(
     pt: &LangInput,
     en: &LangInput,
@@ -1456,6 +1569,12 @@ pub fn apply_updates(
             }
             "cargo_toml" => new_txt = update_cargo_toml(&new_txt, &pt.version),
             "cargo_lock" => new_txt = update_cargo_lock(&new_txt, &pt.version),
+            "repo_appx_manifest" => {
+                new_txt = update_appx_manifest(&new_txt, &pt.version);
+            }
+            "repo_geoestabil_txt" => {
+                new_txt = update_geoestabil_txt(&new_txt, pt, en);
+            }
             k if k.starts_with("installer_")
                 || entry.rel_path.to_lowercase().ends_with(".iss") =>
             {
@@ -1597,6 +1716,30 @@ mod tests {
     }
 
     #[test]
+    fn test_update_repo_appx_manifest_and_geoestabil_txt() {
+        let pt = LangInput::new("2027.5.10.0", 10, 4, 2027);
+        let en = LangInput::new("2027.5.10.0", 10, 4, 2027);
+
+        let appx = r#"<Package><Identity Name="fernandoncidade.GeoEstabil" Publisher="CN=test" Version="2026.11.11.0" ProcessorArchitecture="x64" /></Package>"#;
+        let up_appx = update_appx_manifest(appx, &pt.version);
+        assert!(up_appx.contains(r#"Version="2027.5.10.0""#));
+
+        let txt = r#"
+"C:\Users\ferna\APLICATIVOS\RS\GeoEstabil_rs\docs\release-v2026.11.11.0.md";
+Versão: 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
+DESTAQUES DA VERSÃO 2026.11.11.0 (LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE)
+Version: 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
+HIGHLIGHTS IN VERSION 2026.11.11.0 (INITIAL COMMERCIAL & OPEN-SOURCE RELEASE)
+"#;
+        let up_txt = update_geoestabil_txt(txt, &pt, &en);
+        assert!(up_txt.contains(r#"docs\release-v2027.5.10.0.md"#));
+        assert!(up_txt.contains("Versão: 2027.5.10.0 (Cargo: 2027.5.10) | Data: 10 de maio de 2027"));
+        assert!(up_txt.contains("DESTAQUES DA VERSÃO 2027.5.10.0 (LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE)"));
+        assert!(up_txt.contains("Version: 2027.5.10.0 (Cargo: 2027.5.10) | Date: May 10, 2027"));
+        assert!(up_txt.contains("HIGHLIGHTS IN VERSION 2027.5.10.0 (INITIAL COMMERCIAL & OPEN-SOURCE RELEASE)"));
+    }
+
+    #[test]
     fn test_simulated_full_apply_preserves_parity_and_rechecks_clean() {
         let root = project_root_dir();
         let tmp = std::env::temp_dir().join(format!("geoestabil_version_sim_{}", std::process::id()));
@@ -1615,7 +1758,7 @@ mod tests {
             if let Some(p) = dst.parent() {
                 fs::create_dir_all(p).unwrap();
             }
-            if entry.rel_path.ends_with(".md") || entry.rel_path.ends_with(".txt") {
+            if entry.rel_path.ends_with(".md") || entry.rel_path.ends_with(".txt") || entry.rel_path.ends_with(".xml") {
                 let raw = fs::read_to_string(&src).unwrap();
                 orig_line_counts.insert(entry.key.clone(), raw.lines().count());
             }

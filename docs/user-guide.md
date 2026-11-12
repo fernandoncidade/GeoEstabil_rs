@@ -1,4 +1,4 @@
-# Guia Rápido do Usuário / Quick User Guide — GeoEstabil (`v2026.11.11.0`)
+# Guia Rápido do Usuário / Quick User Guide — GeoEstabil (`v2026.11.12.0`)
 
 <p align="center">
   <b>Selecione o idioma / Select language:</b><br>

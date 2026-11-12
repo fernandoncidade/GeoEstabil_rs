@@ -1,5 +1,26 @@
 ====================================================================================
 RELEASE NOTES — GEOESTABIL
+Version: 2026.11.12.0 (Cargo: 2026.11.12) | Date: November 12, 2026
+Channels: GitHub Source (GNU AGPLv3) & Microsoft Store MSIX (Commercial EULA / CLC)
+====================================================================================
+
+HIGHLIGHTS IN VERSION 2026.11.12.0 (INITIAL COMMERCIAL & OPEN-SOURCE RELEASE)
+------------------------------------------------------------------------------------
+
+1. VISUAL STABILITY AND ELIMINATION OF INTERFACE JITTER
+• Enhanced visual responsiveness across all buttons, tabs, and interactive controls, completely eliminating any hovering jitter, vibration, or inadvertent displacement of neighboring components when moving the mouse cursor.
+
+2. VIDEO MEMORY OPTIMIZATION AND GRAPHICAL SMOOTHNESS
+• Modernization of the application graphics rendering system to operate with minimal video card memory usage, preventing freezes, slowdowns, or screen lockups when running alongside multiple applications, web browsers, or other open windows on the system.
+
+3. COMPREHENSIVE USER MANUAL COVERING ALL TOOLS AND COMMANDS
+• Integration of complete step-by-step guidance within the User Manual, clearly describing how to operate all five visual workspaces, configure soils and slopes, perform retaining wall calculations, and utilize every command of the terminal utility, fully available in both Portuguese and English.
+
+4. ENHANCEMENTS IN DISTRIBUTION MANAGEMENT AND PACKAGING CONSISTENCY
+• Refinement of the automated verification and packaging workflows, ensuring seamless synchronization of versions, distribution manifests, and technical references between Microsoft Store releases and the public repository.
+
+====================================================================================
+RELEASE NOTES — GEOESTABIL
 Version: 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
 Channels: GitHub Source (GNU AGPLv3) & Microsoft Store MSIX (Commercial EULA / CLC)
 ====================================================================================

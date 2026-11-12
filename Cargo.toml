@@ -1,6 +1,6 @@
 [package]
 name = "geoestabil_rs"
-version = "2026.11.11"
+version = "2026.11.12"
 edition = "2021"
 description = "GeoEstabil — Ferramenta auxiliar para estudo de estabilidade de taludes e dimensionamento de muros de arrimo (referências ABNT NBR 11682, NBR 6122, NBR 6118)"
 authors = ["Fernando Nillsson Cidade <linceu_lighthouse@outlook.com>"]
@@ -24,7 +24,7 @@ name = "geoestabil-cli"
 path = "src/bin/main_cli.rs"
 
 [dependencies]
-eframe = "0.37.0"
+eframe = { version = "0.37.0", features = ["glow"] }
 egui = "0.37.0"
 rayon = "1.10.0"
 image = { version = "0.25.10", default-features = false, features = ["ico", "png"] }

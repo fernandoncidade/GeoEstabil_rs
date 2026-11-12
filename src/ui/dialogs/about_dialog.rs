@@ -424,7 +424,7 @@ impl AboutDialog {
                 if ui
                     .selectable_label(
                         self.selected_history_sub == 1,
-                        if pt { "🚀 Notas de Lançamento (2026.11.11.0)" } else { "🚀 Release Notes (2026.11.11.0)" },
+                        if pt { "🚀 Notas de Lançamento (2026.11.12.0)" } else { "🚀 Release Notes (2026.11.12.0)" },
                     )
                     .clicked()
                 {

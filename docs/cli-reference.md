@@ -25,7 +25,7 @@ geoestabil-cli <comando> [opções]
 | **`slope`** | `--input \| -i <proj.geoestabil>` `[--output \| -o <arquivo.html>]` | Carrega projeto JSON `.geoestabil`, executa varredura paralela Rayon (Fellenius, Bishop Simplificado e Janbu Simplificado) e exibe o círculo crítico. |
 | **`wall`** | `--input \| -i <proj.geoestabil>` `[--output \| -o <arquivo.html>]` | Executa verificação externa do muro (`FS_tomb`, `FS_desl`) e dimensionamento da armadura do fuste conforme NBR 6118. |
 | **`soils`** | — | Imprime em tabela a base padrão de solos típicos brasileiros correlacionados ao $N_{SPT}$ (ABNT NBR 6122). |
-| **`version`** | (`--version` / `-v`) | Exibe a versão semântica do pacote (`2026.11.11`), normas centrais e dados de autoria. |
+| **`version`** | (`--version` / `-v`) | Exibe a versão semântica do pacote (`2026.11.12`), normas centrais e dados de autoria. |
 | **`help`** | (`--help` / `-h`) | Imprime o guia rápido de uso no terminal. |
 
 ## 3. Exemplos Práticos
@@ -69,7 +69,7 @@ geoestabil-cli <command> [options]
 | **`slope`** | `--input \| -i <proj.geoestabil>` `[--output \| -o <file.html>]` | Loads a `.geoestabil` JSON project, executes parallel Rayon sweeps (Fellenius, Simplified Bishop, Simplified Janbu), and reports the critical circle. |
 | **`wall`** | `--input \| -i <proj.geoestabil>` `[--output \| -o <file.html>]` | Runs external retaining wall checks (`FS_overturning`, `FS_sliding`) and stem rebar design under ABNT NBR 6118. |
 | **`soils`** | — | Prints a formatted catalog table of reference Brazilian soils correlated to $N_{SPT}$ (ABNT NBR 6122). |
-| **`version`** | (`--version` / `-v`) | Displays semantic package version (`2026.11.11`), core standards, and authorship credits. |
+| **`version`** | (`--version` / `-v`) | Displays semantic package version (`2026.11.12`), core standards, and authorship credits. |
 | **`help`** | (`--help` / `-h`) | Prints the quick CLI usage reference in the terminal. |
 
 ## 3. Practical Examples

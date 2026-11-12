@@ -14,8 +14,8 @@
 
 # GeoEstabil — Manual Técnico de Formulações e Engenharia
 
-**Versão:** `2026.11.11.0`  
-**Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0`  
+**Data:** `12 de novembro de 2026`  
 **Normas Referenciadas:** ABNT NBR 11682:2009 (*Estabilidade de encostas*), ABNT NBR 6122:2022 (*Projeto e execução de fundações*) e ABNT NBR 6118:2023 (*Projeto de estruturas de concreto*)  
 **Normas Correlatas:** ABNT NBR 6484:2020 (*Sondagem SPT*), NBR 6502:2022 (*Rochas e solos*), NBR 6120:2019 (*Ações*), NBR 7480:2022 (*Aço CA-50*) e NBR 13133:2021 (*Levantamento topográfico*)  
 **Autor e Canal de Suporte (somente e-mail, sem urgência):** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
@@ -24,7 +24,7 @@
 
 ### 1. Visão Geral do Sistema
 
-O **GeoEstabil** é uma ferramenta desktop auxiliar voltada a **estudo acadêmico, ensino e experimentação computacional** em engenharia geotécnica e estrutural, desenvolvida nativamente em **Rust (Edição 2021)** com interface imediata em **`egui` / `eframe`**, paralelismo em CPU via **Rayon** e banco local **SQLite3**. O sistema executa simulações de estabilidade de taludes pelo método das fatias, cálculos de empuxos de terra, verificações de estabilidade externa e dimensionamento didático em concreto armado para muros de arrimo.
+O **GeoEstabil** é uma ferramenta desktop auxiliar voltada a **estudo acadêmico, ensino e experimentação computacional** em engenharia geotécnica e estrutural, desenvolvida nativamente em **Rust (Edição 2021)** com interface imediata em **`egui` / `eframe`**, renderização vetorial leve em **Glow (OpenGL 3.3/WGL)**, paralelismo em CPU via **Rayon** e banco local **SQLite3**. O sistema executa simulações de estabilidade de taludes pelo método das fatias, cálculos de empuxos de terra, verificações de estabilidade externa e dimensionamento didático em concreto armado para muros de arrimo.
 
 ---
 
@@ -79,11 +79,25 @@ O **GeoEstabil** é uma ferramenta desktop auxiliar voltada a **estudo acadêmic
 
 ---
 
-### 4. Aviso de Uso Acadêmico, Suporte por E-mail e Isenção
+### 4. Automação por Linha de Comando (`geoestabil-cli.exe`)
+
+O GeoEstabil disponibiliza o executável independente **`geoestabil-cli.exe`** para execução em lote e integração em rotinas automatizadas sem interface gráfica:
+- **`presets`**: Lista os 4 casos de benchmark integrados com índice, título, descrição de engenharia e modo ativo (Talude ou Muro);
+- **`run-preset <1..4> [--output | -o <arquivo>] [--lang | -l <pt|en>]`**: Executa o caso pré-configurado e exporta memorial em `.html`, `.pdf`, `.md` ou `.svg`;
+- **`slope --input | -i <proj.geoestabil> [--output | -o <relatorio>] [--lang | -l <pt|en>]`**: Executa varredura multithreaded Rayon em arquivo de talude e grava relatório;
+- **`wall --input | -i <proj.geoestabil> [--output | -o <relatorio>] [--lang | -l <pt|en>]`**: Executa estabilidade externa (tombamento/deslizamento) e armadura do fuste de muro;
+- **`soils [--lang | -l <pt|en>]`**: Imprime tabela dos solos típicos da ABNT NBR 6122 correlacionados ao índice de penetração $N_{\text{SPT}}$ (NBR 6484);
+- **`version`** (`--version` / `-v`): Exibe versão semântica (`v2026.11.12`), normas centrais e dados de autoria;
+- **`help`** (`--help` / `-h`): Exibe o guia completo de sintaxe e opções no terminal;
+- **Variáveis de Ambiente**: `GEOESTABIL_RENDERER=glow` (OpenGL de baixo consumo de VRAM) ou `wgpu`, e `WGPU_POWER_PREF=low` ou `high`.
+
+---
+
+### 5. Aviso de Uso Acadêmico, Suporte por E-mail e Isenção
 
 O **GeoEstabil** destina-se exclusivamente a estudo acadêmico, ensino e experimentação computacional, podendo conter falhas ou aproximações numéricas. **NÃO deve ser utilizado como software definitivo em produção, obras ou projetos reais** sem conferência manual completa, validação cruzada em outras ferramentas consolidadas, ensaios de campo e supervisão de profissional habilitado (incluindo eventual ART/RRT junto ao CREA/CAU). Fornecido **"no estado em que se encontra" ("AS IS")**, com suporte exclusivo via e-mail (**`linceu_lighthouse@outlook.com`**) conforme a disponibilidade do autor e sem obrigação de urgência, e com isenção integral por uso indevido ou aplicação produtiva por conta e risco do usuário.
 
-Versão documentada: `2026.11.11.0`
+Versão documentada: `2026.11.12.0`
 
 </details>
 
@@ -96,8 +110,8 @@ Versão documentada: `2026.11.11.0`
 
 # GeoEstabil — Technical Formulations & Engineering Manual
 
-**Version:** `2026.11.11.0`  
-**Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0`  
+**Date:** `November 12, 2026`  
 **Referenced Standards:** ABNT NBR 11682:2009 (*Slope stability*), ABNT NBR 6122:2022 (*Design and execution of foundations*), and ABNT NBR 6118:2023 (*Design of concrete structures*)  
 **Correlated Standards:** ABNT NBR 6484:2020 (*SPT sounding*), NBR 6502:2022 (*Rocks and soils*), NBR 6120:2019 (*Actions*), NBR 7480:2022 (*CA-50 steel*), and NBR 13133:2021 (*Topographic surveying*)  
 **Author & Support Email (availability only, no urgency):** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
@@ -106,7 +120,7 @@ Versão documentada: `2026.11.11.0`
 
 ### 1. System Overview
 
-**GeoEstabil** is an auxiliary desktop tool intended for **academic study, teaching, and computational experimentation** in geotechnical and structural engineering, built natively in **Rust (Edition 2021)** with an immediate-mode interface powered by **`egui` / `eframe`**, CPU parallelism via **Rayon**, and local **SQLite3** storage. The system runs limit-equilibrium slope stability slice simulations, lateral earth pressure calculations, external stability checks, and educational reinforced concrete sizing for retaining walls.
+**GeoEstabil** is an auxiliary desktop tool intended for **academic study, teaching, and computational experimentation** in geotechnical and structural engineering, built natively in **Rust (Edition 2021)** with an immediate-mode interface powered by **`egui` / `eframe`**, lightweight vector rendering via **Glow (OpenGL 3.3/WGL)**, CPU parallelism via **Rayon**, and local **SQLite3** storage. The system runs limit-equilibrium slope stability slice simulations, lateral earth pressure calculations, external stability checks, and educational reinforced concrete sizing for retaining walls.
 
 ---
 
@@ -131,7 +145,7 @@ Versão documentada: `2026.11.11.0`
 - **Rankine Theory ($\delta = 0$):**
   $$K_a = \tan^2\left(45^\circ - \frac{\phi'}{2}\right), \quad K_p = \tan^2\left(45^\circ + \frac{\phi'}{2}\right)$$
 - **Coulomb Theory (wall-soil friction $\delta$, backface angle $\theta$, and backfill slope $\beta$):**
-  $$K_a = \frac{\cos^2(\phi' - \theta)}{\cos^2\theta \cdot \cos(\theta + \delta) \left[1 + \sqrt{\frac{\sin(\phi' + \delta)\sin(\phi' - \beta)}{\cos(\theta + \delta)\cos(\theta - \beta)}}\right]^2}$$
+  $$K_a = \frac{\cos^2(\phi' - \theta)}{\cos^2\theta \cdot \cos(\theta + \ delta) \left[1 + \sqrt{\frac{\sin(\phi' + \delta)\sin(\phi' - \beta)}{\cos(\theta + \delta)\cos(\theta - \beta)}}\right]^2}$$
 - **Total Active Force Components:**
   - Soil earth thrust (dry/submerged), uniform surcharge thrust $E_{a,q} = q \cdot K_a \cdot H$, and hydrostatic water wedge $E_w = \frac{1}{2}\gamma_w h_w^2$;
   - Tension crack depth in cohesive soils: $z_0 = \frac{2c'}{\gamma\sqrt{K_a}}$.
@@ -161,10 +175,24 @@ Versão documentada: `2026.11.11.0`
 
 ---
 
-### 4. Academic Scope, Email-Only Support & Liability Exemption
+### 4. Command-Line Interface Automation (`geoestabil-cli.exe`)
+
+GeoEstabil provides the standalone **`geoestabil-cli.exe`** binary for headless batch processing and automated pipeline execution without the graphical UI:
+- **`presets`**: Lists all 4 built-in benchmark cases with index, title, engineering description, and active solver mode (Slope or Wall);
+- **`run-preset <1..4> [--output | -o <file>] [--lang | -l <pt|en>]`**: Executes the pre-configured case and exports calculation memorials in `.html`, `.pdf`, `.md`, or `.svg`;
+- **`slope --input | -i <proj.geoestabil> [--output | -o <report>] [--lang | -l <pt|en>]`**: Executes multi-threaded Rayon slope sweeps from a project file and writes reports;
+- **`wall --input | -i <proj.geoestabil> [--output | -o <report>] [--lang | -l <pt|en>]`**: Runs external stability checks (overturning/sliding) and stem rebar sizing for walls;
+- **`soils [--lang | -l <pt|en>]`**: Prints a formatted table of standard ABNT NBR 6122 soils correlated to the $N_{\text{SPT}}$ penetration index (NBR 6484);
+- **`version`** (`--version` / `-v`): Displays the semantic package version (`v2026.11.12`), core standards, and author credits;
+- **`help`** (`--help` / `-h`): Displays the complete syntax guide and command options in the terminal;
+- **Environment Variables**: `GEOESTABIL_RENDERER=glow` (low-VRAM OpenGL renderer) or `wgpu`, and `WGPU_POWER_PREF=low` or `high`.
+
+---
+
+### 5. Academic Scope, Email-Only Support & Liability Exemption
 
 **GeoEstabil** is intended exclusively for academic study, teaching, and computational experimentation, and may contain defects or numerical approximations. **It MUST NOT be used as definitive software in production, civil works, or professional projects** without complete manual verification, cross-checking in established market tools, field testing, and oversight by a licensed professional (including any required ART/RRT filing before CREA/CAU). Provided **"AS IS"** with support solely via email (**`linceu_lighthouse@outlook.com`**) by maintainer availability without urgency, and complete author exemption from improper or production misuse.
 
-Documented version: `2026.11.11.0`
+Documented version: `2026.11.12.0`
 
 </details>

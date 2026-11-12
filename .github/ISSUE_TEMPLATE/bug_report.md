@@ -14,7 +14,7 @@ Uma descrição clara e concisa da falha encontrada no **GeoEstabil**.
 
 ## Ambiente
 - **Sistema Operacional:** Windows 11 / Windows 10 (x64)
-- **Versão do GeoEstabil:** (ex: `2026.11.11.0`)
+- **Versão do GeoEstabil:** (ex: `2026.11.12.0`)
 - **Binário Afetado:** [ ] Desktop GUI (`geoestabil.exe`)  [ ] CLI (`geoestabil-cli.exe`)  [ ] Ambos
 - **Canal de Distribuição:** [ ] Microsoft Store (MSIX)  [ ] Código-Fonte GitHub (`GNU AGPLv3`)  [ ] Distribuição Direta
 
@@ -40,7 +40,7 @@ A clear and concise description of the defect found in **GeoEstabil**.
 
 ## Environment
 - **Operating System:** Windows 11 / Windows 10 (x64)
-- **GeoEstabil Version:** (e.g., `2026.11.11.0`)
+- **GeoEstabil Version:** (e.g., `2026.11.12.0`)
 - **Affected Binary:** [ ] Desktop GUI (`geoestabil.exe`)  [ ] CLI (`geoestabil-cli.exe`)  [ ] Both
 - **Distribution Channel:** [ ] Microsoft Store (MSIX)  [ ] GitHub Source (`GNU AGPLv3`)  [ ] Direct Distribution
 

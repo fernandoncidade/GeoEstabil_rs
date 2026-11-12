@@ -1,5 +1,26 @@
 ====================================================================================
 NOTAS DE LANÇAMENTO (RELEASE NOTES) — GEOESTABIL
+Versão: 2026.11.12.0 (Cargo: 2026.11.12) | Data: 12 de novembro de 2026
+Canais: Código-Fonte GitHub (GNU AGPLv3) & Microsoft Store MSIX (EULA / CLC Comercial)
+====================================================================================
+
+DESTAQUES DA VERSÃO 2026.11.12.0 (LANÇAMENTO INICIAL COMERCIAL E OPEN-SOURCE)
+------------------------------------------------------------------------------------
+
+1. ESTABILIDADE VISUAL E ELIMINAÇÃO DE OSCILAÇÕES NA INTERFACE
+• Aperfeiçoamento da resposta visual de todos os botões, abas e controles interativos da interface, eliminando completamente qualquer tremor, vibração ou deslocamento involuntário dos componentes vizinhos durante a passagem do cursor do mouse.
+
+2. OTIMIZAÇÃO DO CONSUMO DE MEMÓRIA DE VÍDEO E FLUIDEZ GRÁFICA
+• Modernização do mecanismo de aceleração gráfica da aplicação para operar com consumo mínimo de memória da placa de vídeo, impedindo travamentos, lentidões ou congelamentos da tela quando o usuário utiliza múltiplos programas, navegadores ou outras janelas abertas simultaneamente no sistema.
+
+3. MANUAL DE INSTRUÇÕES COMPLETO COM TODAS AS FERRAMENTAS E COMANDOS
+• Integração de documentação completa e ilustrada no Manual de Instruções, detalhando de forma clara o passo a passo de operação de cada uma das cinco abas visuais, a configuração de solos e taludes, os cálculos de contenções e o uso integral de todos os comandos do utilitário de terminal, disponível nativamente em Português e Inglês.
+
+4. APRIMORAMENTOS NA GESTÃO E CONSISTÊNCIA DE DISTRIBUIÇÃO
+• Refinamento dos processos automatizados de verificação e empacotamento da aplicação, assegurando perfeita sincronização de versões, manifestos de distribuição e referências documentais entre as edições da Microsoft Store e o repositório público.
+
+====================================================================================
+NOTAS DE LANÇAMENTO (RELEASE NOTES) — GEOESTABIL
 Versão: 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
 Canais: Código-Fonte GitHub (GNU AGPLv3) & Microsoft Store MSIX (EULA / CLC Comercial)
 ====================================================================================

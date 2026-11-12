@@ -1,4 +1,4 @@
-# Referências Técnicas e Aviso Legal / Technical References & Legal Disclaimer — GeoEstabil (`v2026.11.11.0`)
+# Referências Técnicas e Aviso Legal / Technical References & Legal Disclaimer — GeoEstabil (`v2026.11.12.0`)
 
 <p align="center">
   <b>Selecione o idioma / Select language:</b><br>

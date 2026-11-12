@@ -1,5 +1,5 @@
 END USER LICENSE AGREEMENT (EULA) — GEOESTABIL
-Version 2026.11.11.0, November 11, 2026
+Version 2026.11.12.0, November 12, 2026
 Author and Developer: Fernando Nillsson Cidade (Natural Person)
 Official Support Contact (Email Only): linceu_lighthouse@outlook.com
 

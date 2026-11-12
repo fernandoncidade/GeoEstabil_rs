@@ -14,8 +14,8 @@
 
 # GeoEstabil — Diretrizes para Contribuição e Comunidade
 
-**Versão:** `2026.11.11.0`  
-**Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0`  
+**Data:** `12 de novembro de 2026`  
 **Autor e Mantenedor:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
 **Licenciamento:** GNU AGPLv3 (Código Aberto) / Licença Comercial (Microsoft Store)  
 
@@ -82,8 +82,8 @@ Para manter o projeto organizado e simples de compilar:
 
 # GeoEstabil — Contribution Guidelines & Community
 
-**Version:** `2026.11.11.0`  
-**Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0`  
+**Date:** `November 12, 2026`  
 **Author & Maintainer:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
 **Licensing:** GNU AGPLv3 (Open Source) / Commercial License (Microsoft Store)  
 

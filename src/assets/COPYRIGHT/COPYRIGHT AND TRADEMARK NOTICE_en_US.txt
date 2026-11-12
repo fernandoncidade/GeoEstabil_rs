@@ -1,7 +1,7 @@
 COPYRIGHT AND BRAND PROTECTION NOTICE — GEOESTABIL
 ==================================================
 
-Version 2026.11.11.0 (Cargo: 2026.11.11) | Date: November 11, 2026
+Version 2026.11.12.0 (Cargo: 2026.11.12) | Date: November 12, 2026
 Copyright (C) 2025-2026 Fernando Nillsson Cidade. All rights reserved.
 
 The GeoEstabil software (geoestabil.exe and geoestabil-cli.exe) and its associated original documentation are the intellectual property of Fernando Nillsson Cidade. Copyright protection covers the original Rust source code, architecture, 2D graphical interface, vector diagrams, texts, manuals, and project description.

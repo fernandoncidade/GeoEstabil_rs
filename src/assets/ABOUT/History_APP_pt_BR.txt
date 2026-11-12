@@ -1,6 +1,6 @@
 ====================================================================================
 HISTÓRICO E ARQUITETURA DA PLATAFORMA GEOESTABIL
-Versão: 2026.11.11.0 — Estabilidade de Taludes & Muros de Arrimo (Rust + egui)
+Versão: 2026.11.12.0 — Estabilidade de Taludes & Muros de Arrimo (Rust + egui)
 ====================================================================================
 
 1. VISÃO DE CONCEPÇÃO E NATUREZA AUXILIAR DE ESTUDO

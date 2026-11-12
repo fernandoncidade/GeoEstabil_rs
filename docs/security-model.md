@@ -14,7 +14,7 @@
 
 # GeoEstabil — Modelo de Segurança, Privacidade Soberana e Análise STRIDE
 
-**Versão:** `2026.11.11.0` (Cargo: `2026.11.11`) | **Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0` (Cargo: `2026.11.12`) | **Data:** `12 de novembro de 2026`  
 **Nível de Segurança:** 100% Local-First | Zero Telemetria | Cálculo Determinístico (Sem IA Externa)  
 **Ambiente Operacional:** Windows 11 / Windows 10 (x64) | **AppUserModelID:** `fernandoncidade.GeoEstabil`  
 **Controlador Local da Aplicação:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
@@ -72,7 +72,7 @@ Em projetos de contenções, fundações e estabilidade de encostas, perfis estr
 
 # GeoEstabil — Security Model, Sovereign Privacy & STRIDE Threat Analysis
 
-**Version:** `2026.11.11.0` (Cargo: `2026.11.11`) | **Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0` (Cargo: `2026.11.12`) | **Date:** `November 12, 2026`  
 **Security Posture:** 100% Local-First | Zero Telemetry | Deterministic Calculation (No External Cloud AI)  
 **Operating Environment:** Windows 11 / Windows 10 (x64) | **AppUserModelID:** `fernandoncidade.GeoEstabil`  
 **Local Application Controller:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  

@@ -2,7 +2,7 @@
 
 **Ferramenta desktop desenvolvida em Rust (Edição 2021) para estudo acadêmico, ensino e análise computacional de estabilidade de encostas e taludes (Métodos de Fatias com paralelismo via Rayon), empuxos de terra (Rankine e Coulomb), verificação de fundações e dimensionamento didático em concreto armado de muros de contenção com base nas formulações de referência das normas ABNT NBR 11682:2009, NBR 6122:2022 e NBR 6118:2023. Conta com interface gráfica imediata (`egui`/`eframe`) e utilitário de linha de comando (`geoestabil-cli.exe`).**
 
-[![Latest Release](https://img.shields.io/badge/Release-v2026.11.11.0-blue.svg)](docs/release-v2026.11.11.0.md)
+[![Latest Release](https://img.shields.io/badge/Release-v2026.11.12.0-blue.svg)](docs/release-v2026.11.12.0.md)
 [![Rust 2021](https://img.shields.io/badge/Rust-2021%20Edition-DEA584?logo=rust)](Cargo.toml)
 [![egui 0.37](https://img.shields.io/badge/egui-0.37-5C7CFA?logo=rust)](Cargo.toml)
 [![Rayon Parallel](https://img.shields.io/badge/Parallel-Rayon_CPU-orange.svg)](Cargo.toml)
@@ -30,7 +30,7 @@
 
 ## <a id="ptbr"></a>🇧🇷 Português (BR)
 
-> **Observação:** Este repositório refere-se à versão **`2026.11.11.0`** do **GeoEstabil** (implementação nativa em **Rust**), disponibilizada sob modelo simples de **Duplo Licenciamento** (**GNU AGPLv3** para o código-fonte público no GitHub e **EULA Comercial + CLC** para os binários oficiais distribuídos na Microsoft Store, com execução 100% local e offline). Apoie o projeto e instale a versão oficial assinada digitalmente através do link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9P9BDZ9RHRC7).
+> **Observação:** Este repositório refere-se à versão **`2026.11.12.0`** do **GeoEstabil** (implementação nativa em **Rust**), disponibilizada sob modelo simples de **Duplo Licenciamento** (**GNU AGPLv3** para o código-fonte público no GitHub e **EULA Comercial + CLC** para os binários oficiais distribuídos na Microsoft Store, com execução 100% local e offline). Apoie o projeto e instale a versão oficial assinada digitalmente através do link: [Instalar via Microsoft Store](https://apps.microsoft.com/detail/9P9BDZ9RHRC7).
 
 <details>
 <summary><b>Clique para expandir / recolher o README em português</b></summary><br>
@@ -50,7 +50,7 @@
 ### 📌 Ficha Técnica do Projeto
 
 - **Nome Oficial:** GeoEstabil
-- **Versão:** `2026.11.11.0` (Data: 11 de novembro de 2026)
+- **Versão:** `2026.11.12.0` (Data: 12 de novembro de 2026)
 - **Autor e Mantenedor:** Fernando Nillsson Cidade
 - **E-mail Oficial de Suporte (exclusivamente por disponibilidade, sem urgência):** `linceu_lighthouse@outlook.com`
 - **Repositório Oficial:** `https://github.com/fernandoncidade`
@@ -172,7 +172,7 @@ O **GeoEstabil** é uma ferramenta computacional auxiliar destinada **exclusivam
 
 ## <a id="enus"></a>🇺🇸 English (US)
 
-> **Note:** This repository corresponds to release **`2026.11.11.0`** of **GeoEstabil** (native **Rust** implementation), made available under a simple **Dual-Licensing** framework (**GNU AGPLv3** for public source code on GitHub and **Commercial EULA + CLC** for official commercial binaries distributed on the Microsoft Store, with 100% local and offline execution). Support the project and get the officially signed release via: [Install via Microsoft Store](https://apps.microsoft.com/detail/9P9BDZ9RHRC7).
+> **Note:** This repository corresponds to release **`2026.11.12.0`** of **GeoEstabil** (native **Rust** implementation), made available under a simple **Dual-Licensing** framework (**GNU AGPLv3** for public source code on GitHub and **Commercial EULA + CLC** for official commercial binaries distributed on the Microsoft Store, with 100% local and offline execution). Support the project and get the officially signed release via: [Install via Microsoft Store](https://apps.microsoft.com/detail/9P9BDZ9RHRC7).
 
 <details>
 <summary><b>Click to expand / collapse the README in English</b></summary><br>
@@ -192,7 +192,7 @@ O **GeoEstabil** é uma ferramenta computacional auxiliar destinada **exclusivam
 ### 📌 Project Fact Sheet
 
 - **Official Name:** GeoEstabil
-- **Version:** `2026.11.11.0` (Date: November 11, 2026)
+- **Version:** `2026.11.12.0` (Date: November 12, 2026)
 - **Author & Maintainer:** Fernando Nillsson Cidade
 - **Official Support Email (strictly by availability, no urgency):** `linceu_lighthouse@outlook.com`
 - **Official Repository:** `https://github.com/fernandoncidade`

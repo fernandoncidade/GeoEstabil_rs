@@ -1,6 +1,6 @@
 ====================================================================================
 AVISOS DE TERCEIROS E ATRIBUIÇÕES DE CÓDIGO ABERTO (THIRD-PARTY NOTICES)
-Versão: 2026.11.11.0 | GEOESTABIL
+Versão: 2026.11.12.0 | GEOESTABIL
 ====================================================================================
 
 O GeoEstabil incorpora bibliotecas de código aberto da comunidade Rust, cujos termos de licença permissivos e direitos autorais originais são integralmente preservados e reproduzidos na pasta `src/assets/LICENSES/`.

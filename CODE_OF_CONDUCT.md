@@ -14,8 +14,8 @@
 
 # GeoEstabil — Código de Conduta da Comunidade
 
-**Versão:** `2026.11.11.0`  
-**Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0`  
+**Data:** `12 de novembro de 2026`  
 **Canal Oficial de Mediação:** `linceu_lighthouse@outlook.com`  
 
 ---
@@ -60,8 +60,8 @@ Casos de conduta abusiva, assédio ou comportamento inaceitável podem ser relat
 
 # GeoEstabil — Community Code of Conduct
 
-**Version:** `2026.11.11.0`  
-**Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0`  
+**Date:** `November 12, 2026`  
 **Official Contact:** `linceu_lighthouse@outlook.com`  
 
 ---

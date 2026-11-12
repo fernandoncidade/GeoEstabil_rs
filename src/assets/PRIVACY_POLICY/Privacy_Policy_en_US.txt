@@ -1,6 +1,6 @@
 GeoEstabil Privacy Policy
-Last updated: November 11, 2026
-Version: 2026.11.11.0 (Cargo: 2026.11.11)
+Last updated: November 12, 2026
+Version: 2026.11.12.0 (Cargo: 2026.11.12)
 
 Your privacy is fundamental to us. This Privacy Policy explains what information GeoEstabil ("Software", comprising geoestabil.exe and geoestabil-cli.exe) uses and, more importantly, how it remains entirely under your control.
 

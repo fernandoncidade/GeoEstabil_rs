@@ -190,8 +190,7 @@ impl GeoEstabilApp {
                         let is_sel = self.active_tab == idx;
                         let text = if is_sel {
                             RichText::new(format!("{} {}", icon, name))
-                                .strong()
-                                .size(13.5)
+                                .size(13.0)
                                 .color(GeoEstabilTheme::accent_blue(dark_tabs))
                         } else {
                             RichText::new(format!("{} {}", icon, name))

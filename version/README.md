@@ -13,7 +13,7 @@ O **`version-editor`** automatiza a auditoria, verificação e atualização sin
 - **Documentação de Raiz e Templates**: `README.md`, `SECURITY.md`, `MANUAL.md`, `OBSERVACAO.md`, `CODE_OF_CONDUCT.md`, `CONTRIBUTING.md`, `.github/ISSUE_TEMPLATE/bug_report.md`
 - **Código Fonte e Testes do Projeto**: `.rs` (`src/ui/dialogs/about_dialog.rs`, `src/bin/main_cli.rs`, `src/core/project.rs`, `src/ui/app.rs`, `tests/dialog_render_test.rs`)
 - **Manifestos e Travas de Dependência**: `.toml` (`Cargo.toml`) e `.lock` (`Cargo.lock`)
-- **Scripts de Instalação e Empacotamento**: `.iss` (`repo/GeoEstabil.iss`)
+- **Scripts de Instalação, Empacotamento e Manifesto**: `.iss` (`repo/GeoEstabil.iss`), manifesto MSIX `repo/AppxManifest.xml` e referências em `repo/GeoEstabil_rs.txt`
 
 ---
 

@@ -14,8 +14,8 @@
 
 # GeoEstabil — Notas de Engenharia de Software, Compilação e Empacotamento
 
-Versão documentada: `2026.11.11.0`  
-**Data:** `11 de novembro de 2026`  
+Versão documentada: `2026.11.12.0`  
+**Data:** `12 de novembro de 2026`  
 **Autor:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
 
 ---
@@ -65,8 +65,8 @@ Para preservar a raiz do repositório limpa e evitar dispersão de artefatos int
 
 # GeoEstabil — Software Engineering, Build, and Packaging Notes
 
-Documented version: `2026.11.11.0`  
-**Date:** `November 11, 2026`  
+Documented version: `2026.11.12.0`  
+**Date:** `November 12, 2026`  
 **Author:** Fernando Nillsson Cidade (`linceu_lighthouse@outlook.com`)  
 
 ---
@@ -265,7 +265,7 @@ To keep the repository root clean and prevent intermediate compiler clutter:
 ├── 📝 cli-reference.md
 ├── 📝 compliance.md
 ├── 📝 licensing.md
-├── 📝 release-v2026.11.11.0.md
+├── 📝 release-v2026.11.12.0.md
 ├── 📝 security-model.md
 ├── 📝 suggested-issues.md
 └── 📝 user-guide.md

@@ -700,7 +700,7 @@ fn test_bilingual_documentation_exact_line_count_parity() {
         "docs/compliance.md",
         "docs/licensing.md",
         "docs/MIGRATION_REPORT.md",
-        "docs/release-v2026.11.11.0.md",
+        "docs/release-v2026.11.12.0.md",
         "docs/security-model.md",
         "docs/suggested-issues.md",
         "docs/user-guide.md",

@@ -14,8 +14,8 @@
 
 # GeoEstabil — Política de Segurança e Relato de Vulnerabilidades
 
-**Versão:** `2026.11.11.0`  
-**Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0`  
+**Data:** `12 de novembro de 2026`  
 **Responsável:** Fernando Nillsson Cidade  
 **Canal Oficial de Contato (Exclusivamente via E-mail):** `linceu_lighthouse@outlook.com`  
 
@@ -63,8 +63,8 @@ Caso identifique uma falha de segurança, comportamento inesperado em dependênc
 
 # GeoEstabil — Security Policy & Vulnerability Reporting
 
-**Version:** `2026.11.11.0`  
-**Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0`  
+**Date:** `November 12, 2026`  
 **Maintainer:** Fernando Nillsson Cidade  
 **Official Contact Channel (Email Only):** `linceu_lighthouse@outlook.com`  
 

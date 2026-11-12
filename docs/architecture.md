@@ -1,4 +1,4 @@
-# Arquitetura de Software / Software Architecture — GeoEstabil (`v2026.11.11.0`)
+# Arquitetura de Software / Software Architecture — GeoEstabil (`v2026.11.12.0`)
 
 <p align="center">
   <b>Selecione o idioma / Select language:</b><br>
@@ -10,7 +10,7 @@
 
 ## 1. Visão Geral do Sistema
 
-O **GeoEstabil** (`geoestabil_rs`) adota uma arquitetura estritamente modularizada em **Rust (Edição 2021)**, desacoplando o núcleo determinístico de engenharia geotécnica e estrutural da camada gráfica acelerada por GPU (`egui 0.37` + `eframe` / `wgpu`) e do executor automatizado em linha de comando (`geoestabil-cli`).
+O **GeoEstabil** (`geoestabil_rs`) adota uma arquitetura estritamente modularizada em **Rust (Edição 2021)**, desacoplando o núcleo determinístico de engenharia geotécnica e estrutural da camada gráfica acelerada por GPU (`egui 0.37` + `eframe` / `Glow` & `wgpu`) e do executor automatizado em linha de comando (`geoestabil-cli`).
 
 ```text
 GeoEstabil_rs/
@@ -48,7 +48,7 @@ GeoEstabil_rs/
 
 ## 4. Camada Gráfica e Janelas Não-Modais (`src/ui/`)
 
-* **Canvas 2D Responsivo:** Ajuste automático à área útil em `CentralPanel`, com zoom ancorado no cursor, pan por arraste e renderização vetorial ao vivo.
+* **Canvas 2D Responsivo & Pipeline Otimizado:** Ajuste automático à área útil em `CentralPanel`, zoom ancorado no cursor, pan por arraste e renderização vetorial ao vivo via `Glow`/OpenGL com baixo consumo de VRAM e estabilidade dimensional em hover.
 * **Janelas Modeless Z-Order (`dialogs/modeless.rs`):** Uso de *viewports* independentes no Windows 11/10, permitindo manter o **Manual de Instruções (`F1`)**, a janela **Sobre (`Ctrl+I`, incluindo referências bibliográficas ABNT na aba *Terceiros (Notices)*)** e o **Catálogo SPT** abertos lado a lado com a área de cálculo.
 
 </details>
@@ -58,7 +58,7 @@ GeoEstabil_rs/
 
 ## 1. System Overview
 
-**GeoEstabil** (`geoestabil_rs`) adopts a strictly modularized architecture in **Rust (Edition 2021)**, decoupling the deterministic geotechnical and structural engineering engine from the GPU-accelerated presentation layer (`egui 0.37` + `eframe` / `wgpu`) and the automated command-line runner (`geoestabil-cli`).
+**GeoEstabil** (`geoestabil_rs`) adopts a strictly modularized architecture in **Rust (Edition 2021)**, decoupling the deterministic geotechnical and structural engineering engine from the GPU-accelerated presentation layer (`egui 0.37` + `eframe` / `Glow` & `wgpu`) and the automated command-line runner (`geoestabil-cli`).
 
 ```text
 GeoEstabil_rs/
@@ -96,7 +96,7 @@ GeoEstabil_rs/
 
 ## 4. Presentation & Modeless Viewport Layer (`src/ui/`)
 
-* **Responsive 2D Canvas:** Automatic fitting inside `CentralPanel` with pointer-anchored zoom, drag pan, and live vector rendering.
+* **Responsive 2D Canvas & Optimized Pipeline:** Automatic fitting inside `CentralPanel` with pointer-anchored zoom, drag pan, and live vector rendering via low-VRAM `Glow`/OpenGL with zero hover jitter.
 * **Modeless Z-Order Windows (`dialogs/modeless.rs`):** Independent desktop viewports on Windows 11/10 allowing the **User Manual (`F1`)**, the **About Dialog (`Ctrl+I`, including ABNT bibliographic references under *Third-Party Notices*)**, and the **SPT Catalog** to remain open alongside the active calculation workspace.
 
 </details>

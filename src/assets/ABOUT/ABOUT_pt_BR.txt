@@ -1,5 +1,5 @@
 Projeto: GEOESTABIL
-Versão: 2026.11.11.0 (Cargo: 2026.11.11) | Data: 11 de novembro de 2026
+Versão: 2026.11.12.0 (Cargo: 2026.11.12) | Data: 12 de novembro de 2026
 Autor e Titular: Fernando Nillsson Cidade
 
 Descrição: Plataforma Desktop Local para Estudo de Estabilidade de Taludes e Muros de Arrimo

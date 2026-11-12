@@ -14,8 +14,8 @@
 
 # GeoEstabil — Licenciamento, Termos de Código Aberto e Esclarecimento Comercial
 
-**Versão:** `2026.11.11.0` (Cargo: `2026.11.11`)  
-**Data:** `11 de novembro de 2026`  
+**Versão:** `2026.11.12.0` (Cargo: `2026.11.12`)  
+**Data:** `12 de novembro de 2026`  
 **Licença do Código-Fonte:** GNU Affero General Public License v3.0 (`GNU AGPLv3` / `AGPL-3.0-only`)  
 **Autor e Titular dos Direitos Autorais:** Fernando Nillsson Cidade  
 **Suporte (exclusivamente via e-mail, por disponibilidade e sem urgência):** `linceu_lighthouse@outlook.com`
@@ -84,8 +84,8 @@ As normas técnicas eventualmente mencionadas (como ABNT NBR 11682, NBR 6122, NB
 
 # GeoEstabil — Licensing, Open-Source Terms & Commercial Clarification
 
-**Version:** `2026.11.11.0` (Cargo: `2026.11.11`)  
-**Date:** `November 11, 2026`  
+**Version:** `2026.11.12.0` (Cargo: `2026.11.12`)  
+**Date:** `November 12, 2026`  
 **Source Code License:** GNU Affero General Public License v3.0 (`GNU AGPLv3` / `AGPL-3.0-only`)  
 **Author & Copyright Holder:** Fernando Nillsson Cidade  
 **Support (email only, by availability, no urgency):** `linceu_lighthouse@outlook.com`

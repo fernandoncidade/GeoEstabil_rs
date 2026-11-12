@@ -182,37 +182,42 @@ impl GeoEstabilTheme {
             visuals.faint_bg_color = Color32::from_rgb(28, 33, 42);
             visuals.code_bg_color = Color32::from_rgb(30, 35, 44);
             visuals.selection.bg_fill = Color32::from_rgb(25, 118, 210);
-            visuals.selection.stroke = Stroke::new(1.2, Color32::WHITE);
+            visuals.selection.stroke = Stroke::new(1.0, Color32::WHITE);
 
             visuals.widgets.noninteractive.weak_bg_fill = Color32::from_rgb(26, 30, 38);
             visuals.widgets.noninteractive.bg_fill = Color32::from_rgb(26, 30, 38);
             visuals.widgets.noninteractive.bg_stroke = Stroke::new(1.0, Color32::from_rgb(52, 60, 74));
             visuals.widgets.noninteractive.fg_stroke = Stroke::new(1.0, Color32::from_rgb(228, 233, 240));
             visuals.widgets.noninteractive.corner_radius = CornerRadius::same(4);
+            visuals.widgets.noninteractive.expansion = 0.0;
 
             visuals.widgets.inactive.weak_bg_fill = Color32::from_rgb(36, 42, 54);
             visuals.widgets.inactive.bg_fill = Color32::from_rgb(20, 23, 29);
-            visuals.widgets.inactive.bg_stroke = Stroke::new(1.2, Color32::from_rgb(96, 110, 132));
-            visuals.widgets.inactive.fg_stroke = Stroke::new(1.6, Color32::from_rgb(235, 240, 245));
+            visuals.widgets.inactive.bg_stroke = Stroke::new(1.0, Color32::from_rgb(96, 110, 132));
+            visuals.widgets.inactive.fg_stroke = Stroke::new(1.0, Color32::from_rgb(235, 240, 245));
             visuals.widgets.inactive.corner_radius = CornerRadius::same(4);
+            visuals.widgets.inactive.expansion = 0.0;
 
             visuals.widgets.hovered.weak_bg_fill = Color32::from_rgb(48, 58, 76);
             visuals.widgets.hovered.bg_fill = Color32::from_rgb(48, 58, 76);
-            visuals.widgets.hovered.bg_stroke = Stroke::new(1.4, Color32::from_rgb(100, 181, 246));
-            visuals.widgets.hovered.fg_stroke = Stroke::new(1.8, Color32::WHITE);
+            visuals.widgets.hovered.bg_stroke = Stroke::new(1.0, Color32::from_rgb(100, 181, 246));
+            visuals.widgets.hovered.fg_stroke = Stroke::new(1.0, Color32::WHITE);
             visuals.widgets.hovered.corner_radius = CornerRadius::same(4);
+            visuals.widgets.hovered.expansion = 0.0;
 
             visuals.widgets.active.weak_bg_fill = Color32::from_rgb(25, 118, 210);
             visuals.widgets.active.bg_fill = Color32::from_rgb(25, 118, 210);
-            visuals.widgets.active.bg_stroke = Stroke::new(1.5, Color32::from_rgb(144, 202, 249));
-            visuals.widgets.active.fg_stroke = Stroke::new(2.0, Color32::WHITE);
+            visuals.widgets.active.bg_stroke = Stroke::new(1.0, Color32::from_rgb(144, 202, 249));
+            visuals.widgets.active.fg_stroke = Stroke::new(1.0, Color32::WHITE);
             visuals.widgets.active.corner_radius = CornerRadius::same(4);
+            visuals.widgets.active.expansion = 0.0;
 
             visuals.widgets.open.weak_bg_fill = Color32::from_rgb(42, 50, 66);
             visuals.widgets.open.bg_fill = Color32::from_rgb(42, 50, 66);
-            visuals.widgets.open.bg_stroke = Stroke::new(1.2, Color32::from_rgb(100, 181, 246));
-            visuals.widgets.open.fg_stroke = Stroke::new(1.5, Color32::WHITE);
+            visuals.widgets.open.bg_stroke = Stroke::new(1.0, Color32::from_rgb(100, 181, 246));
+            visuals.widgets.open.fg_stroke = Stroke::new(1.0, Color32::WHITE);
             visuals.widgets.open.corner_radius = CornerRadius::same(4);
+            visuals.widgets.open.expansion = 0.0;
             visuals
         } else {
             let mut visuals = Visuals::light();
@@ -223,37 +228,42 @@ impl GeoEstabilTheme {
             visuals.extreme_bg_color = Color32::from_rgb(255, 255, 255);
             visuals.faint_bg_color = Color32::from_rgb(241, 245, 249);
             visuals.selection.bg_fill = Color32::from_rgb(191, 219, 254);
-            visuals.selection.stroke = Stroke::new(1.2, Color32::from_rgb(29, 78, 216));
+            visuals.selection.stroke = Stroke::new(1.0, Color32::from_rgb(29, 78, 216));
 
             visuals.widgets.noninteractive.weak_bg_fill = Color32::from_rgb(248, 250, 252);
             visuals.widgets.noninteractive.bg_fill = Color32::from_rgb(255, 255, 255);
             visuals.widgets.noninteractive.bg_stroke = Stroke::new(1.0, Color32::from_rgb(203, 213, 225));
             visuals.widgets.noninteractive.fg_stroke = Stroke::new(1.0, Color32::from_rgb(15, 23, 42));
             visuals.widgets.noninteractive.corner_radius = CornerRadius::same(4);
+            visuals.widgets.noninteractive.expansion = 0.0;
 
             visuals.widgets.inactive.weak_bg_fill = Color32::from_rgb(226, 232, 240);
             visuals.widgets.inactive.bg_fill = Color32::from_rgb(255, 255, 255);
-            visuals.widgets.inactive.bg_stroke = Stroke::new(1.2, Color32::from_rgb(100, 116, 139));
-            visuals.widgets.inactive.fg_stroke = Stroke::new(1.6, Color32::from_rgb(15, 23, 42));
+            visuals.widgets.inactive.bg_stroke = Stroke::new(1.0, Color32::from_rgb(100, 116, 139));
+            visuals.widgets.inactive.fg_stroke = Stroke::new(1.0, Color32::from_rgb(15, 23, 42));
             visuals.widgets.inactive.corner_radius = CornerRadius::same(4);
+            visuals.widgets.inactive.expansion = 0.0;
 
             visuals.widgets.hovered.weak_bg_fill = Color32::from_rgb(203, 213, 225);
             visuals.widgets.hovered.bg_fill = Color32::from_rgb(219, 234, 254);
-            visuals.widgets.hovered.bg_stroke = Stroke::new(1.4, Color32::from_rgb(29, 78, 216));
-            visuals.widgets.hovered.fg_stroke = Stroke::new(1.8, Color32::from_rgb(15, 23, 42));
+            visuals.widgets.hovered.bg_stroke = Stroke::new(1.0, Color32::from_rgb(29, 78, 216));
+            visuals.widgets.hovered.fg_stroke = Stroke::new(1.0, Color32::from_rgb(15, 23, 42));
             visuals.widgets.hovered.corner_radius = CornerRadius::same(4);
+            visuals.widgets.hovered.expansion = 0.0;
 
             visuals.widgets.active.weak_bg_fill = Color32::from_rgb(191, 219, 254);
             visuals.widgets.active.bg_fill = Color32::from_rgb(191, 219, 254);
-            visuals.widgets.active.bg_stroke = Stroke::new(1.5, Color32::from_rgb(29, 78, 216));
-            visuals.widgets.active.fg_stroke = Stroke::new(2.0, Color32::from_rgb(15, 23, 42));
+            visuals.widgets.active.bg_stroke = Stroke::new(1.0, Color32::from_rgb(29, 78, 216));
+            visuals.widgets.active.fg_stroke = Stroke::new(1.0, Color32::from_rgb(15, 23, 42));
             visuals.widgets.active.corner_radius = CornerRadius::same(4);
+            visuals.widgets.active.expansion = 0.0;
 
             visuals.widgets.open.weak_bg_fill = Color32::from_rgb(219, 234, 254);
             visuals.widgets.open.bg_fill = Color32::from_rgb(255, 255, 255);
-            visuals.widgets.open.bg_stroke = Stroke::new(1.2, Color32::from_rgb(29, 78, 216));
-            visuals.widgets.open.fg_stroke = Stroke::new(1.5, Color32::from_rgb(15, 23, 42));
+            visuals.widgets.open.bg_stroke = Stroke::new(1.0, Color32::from_rgb(29, 78, 216));
+            visuals.widgets.open.fg_stroke = Stroke::new(1.0, Color32::from_rgb(15, 23, 42));
             visuals.widgets.open.corner_radius = CornerRadius::same(4);
+            visuals.widgets.open.expansion = 0.0;
             visuals
         }
     }
@@ -323,5 +333,42 @@ impl GeoEstabilTheme {
         };
         ctx.style_mut_of(egui::Theme::Dark, |s| configure_style(s, true));
         ctx.style_mut_of(egui::Theme::Light, |s| configure_style(s, false));
+    }
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn test_visuals_zero_expansion_and_constant_strokes_prevent_jitter() {
+        for dark_mode in [true, false] {
+            let visuals = GeoEstabilTheme::build_visuals(dark_mode);
+            let widgets = [
+                ("noninteractive", &visuals.widgets.noninteractive),
+                ("inactive", &visuals.widgets.inactive),
+                ("hovered", &visuals.widgets.hovered),
+                ("active", &visuals.widgets.active),
+                ("open", &visuals.widgets.open),
+            ];
+
+            for (name, w) in widgets {
+                assert_eq!(
+                    w.expansion, 0.0,
+                    "dark_mode={}: widget '{}' deve ter expansion = 0.0 para evitar oscilação de layout no hover",
+                    dark_mode, name
+                );
+                assert_eq!(
+                    w.bg_stroke.width, 1.0,
+                    "dark_mode={}: widget '{}' deve manter bg_stroke.width = 1.0 constante",
+                    dark_mode, name
+                );
+                assert_eq!(
+                    w.fg_stroke.width, 1.0,
+                    "dark_mode={}: widget '{}' deve manter fg_stroke.width = 1.0 constante",
+                    dark_mode, name
+                );
+            }
+        }
     }
 }

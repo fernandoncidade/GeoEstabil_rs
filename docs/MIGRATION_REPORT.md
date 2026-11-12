@@ -1,4 +1,4 @@
-# Relatório de Migração Arquitetural / Architecture Migration Report — Ecossistema Rust (`v2026.11.11.0`)
+# Relatório de Migração Arquitetural / Architecture Migration Report — Ecossistema Rust (`v2026.11.12.0`)
 
 <p align="center">
   <b>Selecione o idioma / Select language:</b><br>
@@ -14,7 +14,7 @@ O **GeoEstabil** consolida os aprendizados estruturais de suítes de engenharia 
 
 ## 2. Ganhos Mensuráveis da Arquitetura Nativa Rust + Rayon
 
-| Aspecto | Planilhas / Scripts Avulsos | GeoEstabil (`v2026.11.11.0`) |
+| Aspecto | Planilhas / Scripts Avulsos | GeoEstabil (`v2026.11.12.0`) |
 | :--- | :--- | :--- |
 | **Motor de Fatias** | Loops interpretados lentos e grades rígidas | **Rayon work-stealing** em paralelo na CPU avaliando varreduras multiponto em milissegundos |
 | **Interface 2D** | Sem visualização dinâmica integrada ou licenças de alto custo | **Canvas 2D `egui`/`wgpu`** com Zoom/Pan, Heatmap térmico do FS e diagramas de empuxo em tempo real |
@@ -38,7 +38,7 @@ O **GeoEstabil** consolida os aprendizados estruturais de suítes de engenharia 
 
 ## 2. Measurable Gains from the Native Rust + Rayon Architecture
 
-| Aspect | Spreadsheets / Legacy Scripts | GeoEstabil (`v2026.11.11.0`) |
+| Aspect | Spreadsheets / Legacy Scripts | GeoEstabil (`v2026.11.12.0`) |
 | :--- | :--- | :--- |
 | **Slice Solver Engine** | Slow interpreted loops and rigid search meshes | **Rayon work-stealing** parallel CPU sweeps evaluating multi-point grids in milliseconds |
 | **2D Graphical UI** | No integrated live canvas or high recurring license fees | **`egui`/`wgpu` 2D Canvas** featuring Zoom/Pan, thermal FS Heatmap, and live earth-pressure diagrams |

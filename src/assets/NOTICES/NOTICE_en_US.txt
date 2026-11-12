@@ -1,6 +1,6 @@
 ====================================================================================
 THIRD-PARTY SOFTWARE NOTICES AND OPEN-SOURCE ATTRIBUTIONS
-Version: 2026.11.11.0 | GEOESTABIL
+Version: 2026.11.12.0 | GEOESTABIL
 ====================================================================================
 
 GeoEstabil incorporates third-party open-source Rust crates whose permissive license terms and original copyright notices are preserved and reproduced in full under `src/assets/LICENSES/`.
